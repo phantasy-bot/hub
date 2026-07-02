@@ -1,0 +1,500 @@
+[
+  {
+    "slug": "plugin-browseruse",
+    "packageName": "@phantasy/plugin-browseruse",
+    "displayName": "Agent Browser",
+    "description": "Installable browser automation plugin surface for Phantasy.",
+    "workspace": "operations",
+    "extensionKind": "capability",
+    "category": "automation",
+    "tags": [
+      "browser",
+      "automation",
+      "agent-browser",
+      "puppeteer"
+    ],
+    "permissions": [
+      "browser",
+      "internet",
+      "code_execution"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-browseruse",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": true,
+    "runtimeLoadMode": "npm",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Agent Browser",
+      "category": "automation",
+      "tags": [
+        "browser",
+        "automation",
+        "agent-browser",
+        "puppeteer"
+      ],
+      "workspace": "operations",
+      "extensionKind": "capability",
+      "permissions": [
+        "browser",
+        "internet",
+        "code_execution"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": true,
+      "adminSurface": {
+        "tabId": "browseruse",
+        "label": "Agent Browser",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "browser",
+          "automation",
+          "agent-browser",
+          "puppeteer"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "plugin-github-comments",
+    "packageName": "@phantasy/plugin-github-comments",
+    "displayName": "GitHub Comments",
+    "description": "GitHub comments workflow plugin for Phantasy.",
+    "workspace": "operations",
+    "extensionKind": "integration",
+    "category": "developer",
+    "tags": [
+      "github",
+      "comments",
+      "review",
+      "developer"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-github-comments",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "GitHub Comments",
+      "category": "developer",
+      "tags": [
+        "github",
+        "comments",
+        "review",
+        "developer"
+      ],
+      "workspace": "operations",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "github-comments",
+        "label": "GitHub Comments",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "github",
+          "comments",
+          "review",
+          "developer"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "plugin-google-chat",
+    "packageName": "@phantasy/plugin-google-chat",
+    "displayName": "Google Chat",
+    "description": "Google Chat messaging integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "google-chat",
+      "messaging",
+      "chat",
+      "bot"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-google-chat",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Google Chat",
+      "category": "messaging",
+      "tags": [
+        "google-chat",
+        "messaging",
+        "chat",
+        "bot"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "google-chat",
+        "label": "Google Chat",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "google-chat",
+          "messaging",
+          "chat",
+          "bot"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "plugin-imessage",
+    "packageName": "@phantasy/plugin-imessage",
+    "displayName": "iMessage",
+    "description": "iMessage integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "imessage",
+      "messages",
+      "chat"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-imessage",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "iMessage",
+      "category": "messaging",
+      "tags": [
+        "imessage",
+        "messages",
+        "chat"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "imessage",
+        "label": "iMessage",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "imessage",
+          "messages",
+          "chat"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "plugin-slack",
+    "packageName": "@phantasy/plugin-slack",
+    "displayName": "Slack",
+    "description": "Slack messaging integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "slack",
+      "messaging",
+      "chat",
+      "bot"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-slack",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Slack",
+      "category": "messaging",
+      "tags": [
+        "slack",
+        "messaging",
+        "chat",
+        "bot"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "slack",
+        "label": "Slack",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "slack",
+          "messaging",
+          "chat",
+          "bot"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "plugin-teams",
+    "packageName": "@phantasy/plugin-teams",
+    "displayName": "Teams",
+    "description": "Microsoft Teams messaging integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "teams",
+      "microsoft",
+      "messaging",
+      "chat"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-teams",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Teams",
+      "category": "messaging",
+      "tags": [
+        "teams",
+        "microsoft",
+        "messaging",
+        "chat"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "teams",
+        "label": "Teams",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "teams",
+          "microsoft",
+          "messaging",
+          "chat"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  },
+  {
+    "slug": "plugin-web-search",
+    "packageName": "@phantasy/plugin-web-search",
+    "displayName": "Web Search",
+    "description": "Web-search capability plugin for Phantasy companions.",
+    "workspace": "operations",
+    "extensionKind": "capability",
+    "category": "knowledge",
+    "tags": [
+      "web-search",
+      "search",
+      "internet",
+      "research"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "visibility": "private",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-web-search",
+    "sourceOfTruth": "standalone-repo",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "phase": "source-extracted",
+    "repoExists": true,
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Web Search",
+      "category": "knowledge",
+      "tags": [
+        "web-search",
+        "search",
+        "internet",
+        "research"
+      ],
+      "workspace": "operations",
+      "extensionKind": "capability",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "web-search",
+        "label": "Web Search",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "web-search",
+          "search",
+          "internet",
+          "research"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    }
+  }
+]

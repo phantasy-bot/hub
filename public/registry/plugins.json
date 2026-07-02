@@ -1,0 +1,2073 @@
+[
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-acp",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-acp",
+    "detailPath": "/plugins/plugin-acp/",
+    "icon": {
+      "assetPath": "/icons/acp-logo.svg",
+      "sourcePath": "public/images/acp-logo.svg",
+      "alt": "Virtuals Protocol ACP"
+    },
+    "slug": "plugin-acp",
+    "packageName": "@phantasy/plugin-acp",
+    "displayName": "Virtuals Protocol ACP",
+    "description": "Virtuals Protocol ACP commerce integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "commerce",
+    "tags": [
+      "virtuals",
+      "acp",
+      "commerce",
+      "marketplace"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [
+      {
+        "plugin": "@phantasy/plugin-wallet"
+      }
+    ],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Virtuals Protocol ACP",
+      "category": "commerce",
+      "tags": [
+        "virtuals",
+        "acp",
+        "commerce",
+        "marketplace"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [
+        {
+          "plugin": "@phantasy/plugin-wallet"
+        }
+      ],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "acp",
+        "label": "Virtuals Protocol ACP",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "virtuals",
+          "acp",
+          "commerce",
+          "marketplace"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "acp",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-acp.git",
+      "cli": "phantasy extensions install plugin acp",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-acp.git .phantasy/plugins/acp"
+    },
+    "profileImage": {
+      "assetPath": "/icons/acp-logo.svg",
+      "sourcePath": "public/images/acp-logo.svg",
+      "alt": "Virtuals Protocol ACP"
+    }
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Character",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-adventure",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-adventure",
+    "detailPath": "/plugins/plugin-adventure/",
+    "icon": null,
+    "slug": "plugin-adventure",
+    "packageName": "@phantasy/plugin-adventure",
+    "displayName": "Adventure",
+    "description": "Interactive adventure runtime plugin for Phantasy companions.",
+    "workspace": "character",
+    "extensionKind": "behavior",
+    "category": "games",
+    "tags": [
+      "adventure",
+      "story",
+      "games",
+      "companion"
+    ],
+    "permissions": [],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Adventure",
+      "category": "games",
+      "tags": [
+        "adventure",
+        "story",
+        "games",
+        "companion"
+      ],
+      "workspace": "character",
+      "extensionKind": "behavior",
+      "permissions": [],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "adventure",
+        "label": "Adventure",
+        "workspace": "character",
+        "kind": "generic",
+        "keywords": [
+          "adventure",
+          "story",
+          "games",
+          "companion"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "adventure",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-adventure.git",
+      "cli": "phantasy extensions install plugin adventure",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-adventure.git .phantasy/plugins/adventure"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Site",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-creator-studio",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-creator-studio",
+    "detailPath": "/plugins/plugin-creator-studio/",
+    "icon": null,
+    "slug": "plugin-creator-studio",
+    "packageName": "@phantasy/plugin-creator-studio",
+    "displayName": "Media Workflows",
+    "description": "Workflow-driven image and video generation workspace for companion media creation.",
+    "workspace": "site",
+    "extensionKind": "capability",
+    "category": "media",
+    "tags": [
+      "creator",
+      "studio",
+      "media",
+      "image",
+      "video",
+      "comfyui"
+    ],
+    "permissions": [
+      "storage"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Media Workflows",
+      "category": "media",
+      "tags": [
+        "creator",
+        "studio",
+        "media",
+        "image",
+        "video",
+        "comfyui"
+      ],
+      "workspace": "site",
+      "extensionKind": "capability",
+      "permissions": [
+        "storage"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "creator-studio",
+        "label": "Media Workflows",
+        "workspace": "site",
+        "kind": "generic",
+        "keywords": [
+          "creator",
+          "studio",
+          "media",
+          "image",
+          "video",
+          "comfyui"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "creator-studio",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-creator-studio.git",
+      "cli": "phantasy extensions install plugin creator-studio",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-creator-studio.git .phantasy/plugins/creator-studio"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-discord",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-discord",
+    "detailPath": "/plugins/plugin-discord/",
+    "icon": {
+      "assetPath": "/icons/brands/discord.svg",
+      "sourcePath": "src/admin-ui/public/brands/discord.svg",
+      "alt": "Discord"
+    },
+    "slug": "plugin-discord",
+    "packageName": "@phantasy/plugin-discord",
+    "displayName": "Discord",
+    "description": "Discord community plugin for Phantasy companions.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "social",
+    "tags": [
+      "discord",
+      "community",
+      "messaging",
+      "bot"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Discord",
+      "category": "social",
+      "tags": [
+        "discord",
+        "community",
+        "messaging",
+        "bot"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "discord",
+        "label": "Discord",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "discord",
+          "community",
+          "messaging",
+          "bot"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "discord",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-discord.git",
+      "cli": "phantasy extensions install plugin discord",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-discord.git .phantasy/plugins/discord"
+    },
+    "profileImage": {
+      "assetPath": "/icons/brands/discord.svg",
+      "sourcePath": "src/admin-ui/public/brands/discord.svg",
+      "alt": "Discord"
+    }
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-email",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-email",
+    "detailPath": "/plugins/plugin-email/",
+    "icon": null,
+    "slug": "plugin-email",
+    "packageName": "@phantasy/plugin-email",
+    "displayName": "Email",
+    "description": "Email and inbox integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "email",
+      "inbox",
+      "smtp",
+      "imap",
+      "agentmail"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Email",
+      "category": "messaging",
+      "tags": [
+        "email",
+        "inbox",
+        "smtp",
+        "imap",
+        "agentmail"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "email",
+        "label": "Email",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "email",
+          "inbox",
+          "smtp",
+          "imap",
+          "agentmail"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "email",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-email.git",
+      "cli": "phantasy extensions install plugin email",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-email.git .phantasy/plugins/email"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-erc8004",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-erc8004",
+    "detailPath": "/plugins/plugin-erc8004/",
+    "icon": null,
+    "slug": "plugin-erc8004",
+    "packageName": "@phantasy/plugin-erc8004",
+    "displayName": "ERC-8004",
+    "description": "ERC-8004 identity, reputation, and validation plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "identity",
+    "tags": [
+      "erc8004",
+      "identity",
+      "reputation",
+      "agents"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [
+      {
+        "plugin": "@phantasy/plugin-wallet"
+      }
+    ],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "ERC-8004",
+      "category": "identity",
+      "tags": [
+        "erc8004",
+        "identity",
+        "reputation",
+        "agents"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [
+        {
+          "plugin": "@phantasy/plugin-wallet"
+        }
+      ],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "erc8004",
+        "label": "ERC-8004",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "erc8004",
+          "identity",
+          "reputation",
+          "agents"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "erc8004",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-erc8004.git",
+      "cli": "phantasy extensions install plugin erc8004",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-erc8004.git .phantasy/plugins/erc8004"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-fanvue",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-fanvue",
+    "detailPath": "/plugins/plugin-fanvue/",
+    "icon": {
+      "assetPath": "/icons/fanvue-logo.svg",
+      "sourcePath": "public/images/fanvue-logo.svg",
+      "alt": "Fanvue"
+    },
+    "slug": "plugin-fanvue",
+    "packageName": "@phantasy/plugin-fanvue",
+    "displayName": "Fanvue",
+    "description": "Fanvue creator-business integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "creator",
+    "tags": [
+      "fanvue",
+      "creator",
+      "business",
+      "subscriptions"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Fanvue",
+      "category": "creator",
+      "tags": [
+        "fanvue",
+        "creator",
+        "business",
+        "subscriptions"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "fanvue",
+        "label": "Fanvue",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "fanvue",
+          "creator",
+          "business",
+          "subscriptions"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "fanvue",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-fanvue.git",
+      "cli": "phantasy extensions install plugin fanvue",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-fanvue.git .phantasy/plugins/fanvue"
+    },
+    "profileImage": {
+      "assetPath": "/icons/fanvue-logo.svg",
+      "sourcePath": "public/images/fanvue-logo.svg",
+      "alt": "Fanvue"
+    }
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-financial",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-financial",
+    "detailPath": "/plugins/plugin-financial/",
+    "icon": null,
+    "slug": "plugin-financial",
+    "packageName": "@phantasy/plugin-financial",
+    "displayName": "Financial",
+    "description": "Financial reporting and revenue plugin for Phantasy businesses.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "finance",
+    "tags": [
+      "finance",
+      "revenue",
+      "analytics",
+      "markets"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [
+      {
+        "plugin": "@phantasy/plugin-kalshi"
+      },
+      {
+        "plugin": "@phantasy/plugin-polymarket"
+      },
+      {
+        "plugin": "@phantasy/plugin-wallet"
+      }
+    ],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Financial",
+      "category": "finance",
+      "tags": [
+        "finance",
+        "revenue",
+        "analytics",
+        "markets"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [
+        {
+          "plugin": "@phantasy/plugin-kalshi"
+        },
+        {
+          "plugin": "@phantasy/plugin-polymarket"
+        },
+        {
+          "plugin": "@phantasy/plugin-wallet"
+        }
+      ],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "financial",
+        "label": "Financial",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "finance",
+          "revenue",
+          "analytics",
+          "markets"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "financial",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-financial.git",
+      "cli": "phantasy extensions install plugin financial",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-financial.git .phantasy/plugins/financial"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Operations",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-github",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-github",
+    "detailPath": "/plugins/plugin-github/",
+    "icon": null,
+    "slug": "plugin-github",
+    "packageName": "@phantasy/plugin-github",
+    "displayName": "GitHub",
+    "description": "GitHub integration plugin for Phantasy developer workflows.",
+    "workspace": "operations",
+    "extensionKind": "integration",
+    "category": "developer",
+    "tags": [
+      "github",
+      "developer",
+      "issues",
+      "code"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "GitHub",
+      "category": "developer",
+      "tags": [
+        "github",
+        "developer",
+        "issues",
+        "code"
+      ],
+      "workspace": "operations",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "github",
+        "label": "GitHub",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "github",
+          "developer",
+          "issues",
+          "code"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "github",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-github.git",
+      "cli": "phantasy extensions install plugin github",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-github.git .phantasy/plugins/github"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Operations",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-gitlab",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-gitlab",
+    "detailPath": "/plugins/plugin-gitlab/",
+    "icon": null,
+    "slug": "plugin-gitlab",
+    "packageName": "@phantasy/plugin-gitlab",
+    "displayName": "GitLab",
+    "description": "GitLab integration plugin for Phantasy developer workflows.",
+    "workspace": "operations",
+    "extensionKind": "integration",
+    "category": "developer",
+    "tags": [
+      "gitlab",
+      "developer",
+      "issues",
+      "code"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "GitLab",
+      "category": "developer",
+      "tags": [
+        "gitlab",
+        "developer",
+        "issues",
+        "code"
+      ],
+      "workspace": "operations",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "gitlab",
+        "label": "GitLab",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "gitlab",
+          "developer",
+          "issues",
+          "code"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "gitlab",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-gitlab.git",
+      "cli": "phantasy extensions install plugin gitlab",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-gitlab.git .phantasy/plugins/gitlab"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-instagram",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-instagram",
+    "detailPath": "/plugins/plugin-instagram/",
+    "icon": {
+      "assetPath": "/icons/brands/instagram.svg",
+      "sourcePath": "src/admin-ui/public/brands/instagram.svg",
+      "alt": "Instagram"
+    },
+    "slug": "plugin-instagram",
+    "packageName": "@phantasy/plugin-instagram",
+    "displayName": "Instagram",
+    "description": "Instagram creator integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "social",
+    "tags": [
+      "instagram",
+      "social",
+      "creator",
+      "media"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Instagram",
+      "category": "social",
+      "tags": [
+        "instagram",
+        "social",
+        "creator",
+        "media"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "instagram",
+        "label": "Instagram",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "instagram",
+          "social",
+          "creator",
+          "media"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "instagram",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-instagram.git",
+      "cli": "phantasy extensions install plugin instagram",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-instagram.git .phantasy/plugins/instagram"
+    },
+    "profileImage": {
+      "assetPath": "/icons/brands/instagram.svg",
+      "sourcePath": "src/admin-ui/public/brands/instagram.svg",
+      "alt": "Instagram"
+    }
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-kalshi",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-kalshi",
+    "detailPath": "/plugins/plugin-kalshi/",
+    "icon": null,
+    "slug": "plugin-kalshi",
+    "packageName": "@phantasy/plugin-kalshi",
+    "displayName": "Kalshi",
+    "description": "Kalshi prediction-market integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "markets",
+    "tags": [
+      "kalshi",
+      "prediction-markets",
+      "trading",
+      "finance"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Kalshi",
+      "category": "markets",
+      "tags": [
+        "kalshi",
+        "prediction-markets",
+        "trading",
+        "finance"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "kalshi",
+        "label": "Kalshi",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "kalshi",
+          "prediction-markets",
+          "trading",
+          "finance"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "kalshi",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-kalshi.git",
+      "cli": "phantasy extensions install plugin kalshi",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-kalshi.git .phantasy/plugins/kalshi"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-listmonk",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-listmonk",
+    "detailPath": "/plugins/plugin-listmonk/",
+    "icon": null,
+    "slug": "plugin-listmonk",
+    "packageName": "@phantasy/plugin-listmonk",
+    "displayName": "Listmonk",
+    "description": "Listmonk mailing-list integration for newsletter operators.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "email",
+    "tags": [
+      "listmonk",
+      "newsletter",
+      "email",
+      "subscribers"
+    ],
+    "permissions": [
+      "network"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "transitional",
+    "phantasy": {
+      "displayName": "Listmonk",
+      "category": "email",
+      "tags": [
+        "listmonk",
+        "newsletter",
+        "email",
+        "subscribers"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "network"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "listmonk",
+        "label": "Listmonk",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "listmonk",
+          "newsletter",
+          "email",
+          "subscribers"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "listmonk",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-listmonk.git",
+      "cli": "phantasy extensions install plugin listmonk",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-listmonk.git .phantasy/plugins/listmonk"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Character",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-local-whisper",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-local-whisper",
+    "detailPath": "/plugins/plugin-local-whisper/",
+    "icon": null,
+    "slug": "plugin-local-whisper",
+    "packageName": "@phantasy/plugin-local-whisper",
+    "displayName": "Local Whisper",
+    "description": "Optional local Whisper speech-to-text runtime for Phantasy companions.",
+    "workspace": "character",
+    "extensionKind": "capability",
+    "category": "voice",
+    "tags": [
+      "whisper",
+      "speech-to-text",
+      "local",
+      "audio"
+    ],
+    "permissions": [
+      "storage",
+      "code_execution"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Local Whisper",
+      "category": "voice",
+      "tags": [
+        "whisper",
+        "speech-to-text",
+        "local",
+        "audio"
+      ],
+      "workspace": "character",
+      "extensionKind": "capability",
+      "permissions": [
+        "storage",
+        "code_execution"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "local-whisper",
+        "label": "Local Whisper",
+        "workspace": "character",
+        "kind": "generic",
+        "keywords": [
+          "whisper",
+          "speech-to-text",
+          "local",
+          "audio"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "local-whisper",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-local-whisper.git",
+      "cli": "phantasy extensions install plugin local-whisper",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-local-whisper.git .phantasy/plugins/local-whisper"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Operations",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-monitoring",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-monitoring",
+    "detailPath": "/plugins/plugin-monitoring/",
+    "icon": null,
+    "slug": "plugin-monitoring",
+    "packageName": "@phantasy/plugin-monitoring",
+    "displayName": "Monitoring",
+    "description": "Installable monitoring plugin surface for Phantasy.",
+    "workspace": "operations",
+    "extensionKind": "capability",
+    "category": "observability",
+    "tags": [
+      "metrics",
+      "monitoring",
+      "analytics",
+      "logs"
+    ],
+    "permissions": [],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": true,
+    "runtimeLoadMode": "npm",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Monitoring",
+      "category": "observability",
+      "tags": [
+        "metrics",
+        "monitoring",
+        "analytics",
+        "logs"
+      ],
+      "workspace": "operations",
+      "extensionKind": "capability",
+      "permissions": [],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": true,
+      "adminSurface": {
+        "tabId": "monitoring",
+        "label": "Monitoring",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "metrics",
+          "monitoring",
+          "analytics",
+          "logs"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "monitoring",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "npm",
+      "source": "@phantasy/plugin-monitoring",
+      "cli": "phantasy extensions install plugin monitoring",
+      "direct": "npm install @phantasy/plugin-monitoring"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-polymarket",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-polymarket",
+    "detailPath": "/plugins/plugin-polymarket/",
+    "icon": null,
+    "slug": "plugin-polymarket",
+    "packageName": "@phantasy/plugin-polymarket",
+    "displayName": "Polymarket",
+    "description": "Polymarket prediction-market integration plugin for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "markets",
+    "tags": [
+      "polymarket",
+      "prediction-markets",
+      "trading",
+      "finance"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [
+      {
+        "plugin": "@phantasy/plugin-wallet"
+      }
+    ],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Polymarket",
+      "category": "markets",
+      "tags": [
+        "polymarket",
+        "prediction-markets",
+        "trading",
+        "finance"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [
+        {
+          "plugin": "@phantasy/plugin-wallet"
+        }
+      ],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "polymarket",
+        "label": "Polymarket",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "polymarket",
+          "prediction-markets",
+          "trading",
+          "finance"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "polymarket",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-polymarket.git",
+      "cli": "phantasy extensions install plugin polymarket",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-polymarket.git .phantasy/plugins/polymarket"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Character",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-romance-affection",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-romance-affection",
+    "detailPath": "/plugins/plugin-romance-affection/",
+    "icon": null,
+    "slug": "plugin-romance-affection",
+    "packageName": "@phantasy/plugin-romance-affection",
+    "displayName": "Romance Affection",
+    "description": "Romance-affection state and event plugin for Phantasy companions.",
+    "workspace": "character",
+    "extensionKind": "behavior",
+    "category": "relationships",
+    "tags": [
+      "romance",
+      "affection",
+      "relationship",
+      "companion"
+    ],
+    "permissions": [],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Romance Affection",
+      "category": "relationships",
+      "tags": [
+        "romance",
+        "affection",
+        "relationship",
+        "companion"
+      ],
+      "workspace": "character",
+      "extensionKind": "behavior",
+      "permissions": [],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "romance-affection",
+        "label": "Romance Affection",
+        "workspace": "character",
+        "kind": "generic",
+        "keywords": [
+          "romance",
+          "affection",
+          "relationship",
+          "companion"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "romance-affection",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-romance-affection.git",
+      "cli": "phantasy extensions install plugin romance-affection",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-romance-affection.git .phantasy/plugins/romance-affection"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-telegram",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-telegram",
+    "detailPath": "/plugins/plugin-telegram/",
+    "icon": {
+      "assetPath": "/icons/brands/telegram.svg",
+      "sourcePath": "src/admin-ui/public/brands/telegram.svg",
+      "alt": "Telegram",
+      "monochrome": true
+    },
+    "slug": "plugin-telegram",
+    "packageName": "@phantasy/plugin-telegram",
+    "displayName": "Telegram",
+    "description": "Telegram bot and channel integration plugin for Phantasy companions.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "telegram",
+      "messaging",
+      "bot",
+      "community"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Telegram",
+      "category": "messaging",
+      "tags": [
+        "telegram",
+        "messaging",
+        "bot",
+        "community"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "telegram",
+        "label": "Telegram",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "telegram",
+          "messaging",
+          "bot",
+          "community"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "telegram",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-telegram.git",
+      "cli": "phantasy extensions install plugin telegram",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-telegram.git .phantasy/plugins/telegram"
+    },
+    "profileImage": {
+      "assetPath": "/icons/brands/telegram.svg",
+      "sourcePath": "src/admin-ui/public/brands/telegram.svg",
+      "alt": "Telegram",
+      "monochrome": true
+    }
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-twitch",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-twitch",
+    "detailPath": "/plugins/plugin-twitch/",
+    "icon": null,
+    "slug": "plugin-twitch",
+    "packageName": "@phantasy/plugin-twitch",
+    "displayName": "Twitch",
+    "description": "Twitch streaming and chat integration plugin for Phantasy companions.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "streaming",
+    "tags": [
+      "twitch",
+      "streaming",
+      "chat",
+      "creator"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Twitch",
+      "category": "streaming",
+      "tags": [
+        "twitch",
+        "streaming",
+        "chat",
+        "creator"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "twitch",
+        "label": "Twitch",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "twitch",
+          "streaming",
+          "chat",
+          "creator"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "twitch",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-twitch.git",
+      "cli": "phantasy extensions install plugin twitch",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-twitch.git .phantasy/plugins/twitch"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Character",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-versus",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-versus",
+    "detailPath": "/plugins/plugin-versus/",
+    "icon": null,
+    "slug": "plugin-versus",
+    "packageName": "@phantasy/plugin-versus",
+    "displayName": "Versus",
+    "description": "Competitive versus-game plugin for Phantasy companions.",
+    "workspace": "character",
+    "extensionKind": "behavior",
+    "category": "games",
+    "tags": [
+      "versus",
+      "games",
+      "play",
+      "companion"
+    ],
+    "permissions": [],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Versus",
+      "category": "games",
+      "tags": [
+        "versus",
+        "games",
+        "play",
+        "companion"
+      ],
+      "workspace": "character",
+      "extensionKind": "behavior",
+      "permissions": [],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "versus",
+        "label": "Versus",
+        "workspace": "character",
+        "kind": "generic",
+        "keywords": [
+          "versus",
+          "games",
+          "play",
+          "companion"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "versus",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-versus.git",
+      "cli": "phantasy extensions install plugin versus",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-versus.git .phantasy/plugins/versus"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-wallet",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-wallet",
+    "detailPath": "/plugins/plugin-wallet/",
+    "icon": null,
+    "slug": "plugin-wallet",
+    "packageName": "@phantasy/plugin-wallet",
+    "displayName": "Wallet",
+    "description": "Core wallet integration plugin for Phantasy businesses and agents.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "finance",
+    "tags": [
+      "wallet",
+      "payments",
+      "business",
+      "finance"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Wallet",
+      "category": "finance",
+      "tags": [
+        "wallet",
+        "payments",
+        "business",
+        "finance"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "wallet",
+        "label": "Wallet",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "wallet",
+          "payments",
+          "business",
+          "finance"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "wallet",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-wallet.git",
+      "cli": "phantasy extensions install plugin wallet",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-wallet.git .phantasy/plugins/wallet"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Character",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-weather",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-weather",
+    "detailPath": "/plugins/plugin-weather/",
+    "icon": null,
+    "slug": "plugin-weather",
+    "packageName": "@phantasy/plugin-weather",
+    "displayName": "Weather",
+    "description": "Weather tools and dashboard widget for Phantasy companions using Open-Meteo.",
+    "workspace": "character",
+    "extensionKind": "capability",
+    "category": "utilities",
+    "tags": [
+      "weather",
+      "forecast",
+      "location",
+      "utilities"
+    ],
+    "permissions": [
+      "internet",
+      "storage"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Weather",
+      "category": "utilities",
+      "tags": [
+        "weather",
+        "forecast",
+        "location",
+        "utilities"
+      ],
+      "workspace": "character",
+      "extensionKind": "capability",
+      "permissions": [
+        "internet",
+        "storage"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "weather",
+        "label": "Weather",
+        "workspace": "character",
+        "kind": "generic",
+        "keywords": [
+          "weather",
+          "forecast",
+          "location",
+          "utilities"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "weather",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-weather.git",
+      "cli": "phantasy extensions install plugin weather",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-weather.git .phantasy/plugins/weather"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-x",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-x",
+    "detailPath": "/plugins/plugin-x/",
+    "icon": {
+      "assetPath": "/icons/brands/x.svg",
+      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "alt": "X",
+      "monochrome": true
+    },
+    "slug": "plugin-x",
+    "packageName": "@phantasy/plugin-x",
+    "displayName": "X (Twitter)",
+    "description": "Installable X/Twitter plugin surface for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "social",
+    "tags": [
+      "twitter",
+      "x",
+      "social-media",
+      "posting"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": true,
+    "runtimeLoadMode": "npm",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "X (Twitter)",
+      "category": "social",
+      "tags": [
+        "twitter",
+        "x",
+        "social-media",
+        "posting"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": true,
+      "adminSurface": {
+        "tabId": "x",
+        "label": "X (Twitter)",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "twitter",
+          "x",
+          "social-media",
+          "posting"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "x",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "npm",
+      "source": "@phantasy/plugin-x",
+      "cli": "phantasy extensions install plugin x",
+      "direct": "npm install @phantasy/plugin-x"
+    },
+    "profileImage": {
+      "assetPath": "/icons/brands/x.svg",
+      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "alt": "X",
+      "monochrome": true
+    }
+  }
+]

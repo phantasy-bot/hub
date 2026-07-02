@@ -1,0 +1,226 @@
+[
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Workflows",
+    "repoUrl": "https://github.com/phantasy-bot/workflow-approval-loop",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/workflow-approval-loop",
+    "detailPath": "/workflows/workflow-approval-loop/",
+    "icon": null,
+    "kind": "workflow",
+    "slug": "workflow-approval-loop",
+    "name": "approval-loop",
+    "displayName": "Approval Loop",
+    "description": "Draft work, branch on approval, and either publish or revise.",
+    "workspace": "automations",
+    "extensionKind": "automation",
+    "author": "Phantasy Team",
+    "tags": [
+      "approval",
+      "review",
+      "publishing",
+      "automation"
+    ],
+    "category": "approvals",
+    "banner": null,
+    "syncMode": "source-extract",
+    "sourceExtract": {
+      "sourceFiles": [
+        "packages/workflow-approval-loop/approval-loop.workflow.json",
+        "packages/workflow-approval-loop/approval-loop.workflow.metadata.json"
+      ]
+    },
+    "metadata": {
+      "name": "approval-loop",
+      "displayName": "Approval Loop",
+      "description": "Draft work, branch on approval, and either publish or revise.",
+      "author": "Phantasy Team",
+      "version": "0.1.0-beta",
+      "category": "approvals",
+      "tags": [
+        "approval",
+        "review",
+        "publishing",
+        "automation"
+      ]
+    },
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/workflow-approval-loop.git",
+      "cli": "phantasy extensions install workflow approval-loop",
+      "direct": "git clone https://github.com/phantasy-bot/workflow-approval-loop.git workflows/approval-loop"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Site",
+    "repoUrl": "https://github.com/phantasy-bot/workflow-content-pipeline",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/workflow-content-pipeline",
+    "detailPath": "/workflows/workflow-content-pipeline/",
+    "icon": null,
+    "kind": "workflow",
+    "slug": "workflow-content-pipeline",
+    "name": "content-pipeline",
+    "displayName": "Content Pipeline",
+    "description": "Capture a brief, generate a draft, and produce a publication review handoff.",
+    "workspace": "site",
+    "extensionKind": "automation",
+    "author": "Phantasy Team",
+    "tags": [
+      "content",
+      "editorial",
+      "publishing"
+    ],
+    "category": "content",
+    "banner": null,
+    "syncMode": "source-extract",
+    "sourceExtract": {
+      "sourceFiles": [
+        "packages/workflow-content-pipeline/content-pipeline.workflow.json",
+        "packages/workflow-content-pipeline/content-pipeline.workflow.metadata.json",
+        "packages/workflow-content-pipeline/content-pipeline.automation.json"
+      ]
+    },
+    "metadata": {
+      "name": "content-pipeline",
+      "displayName": "Content Pipeline",
+      "description": "Capture a brief, generate a draft, and produce a publication review handoff.",
+      "author": "Phantasy Team",
+      "version": "0.1.0-beta",
+      "category": "content",
+      "tags": [
+        "content",
+        "editorial",
+        "publishing"
+      ]
+    },
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/workflow-content-pipeline.git",
+      "cli": "phantasy extensions install workflow content-pipeline",
+      "direct": "git clone https://github.com/phantasy-bot/workflow-content-pipeline.git workflows/content-pipeline"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Workflows",
+    "repoUrl": "https://github.com/phantasy-bot/workflow-daily-operator-brief",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/workflow-daily-operator-brief",
+    "detailPath": "/workflows/workflow-daily-operator-brief/",
+    "icon": null,
+    "kind": "workflow",
+    "slug": "workflow-daily-operator-brief",
+    "name": "daily-operator-brief",
+    "displayName": "Daily Operator Brief",
+    "description": "Generate a daily operating summary across publishing, approvals, and system health.",
+    "workspace": "automations",
+    "extensionKind": "automation",
+    "author": "Phantasy Team",
+    "tags": [
+      "operations",
+      "daily",
+      "briefing",
+      "notifications"
+    ],
+    "category": "operations",
+    "banner": null,
+    "syncMode": "source-extract",
+    "sourceExtract": {
+      "sourceFiles": [
+        "packages/workflow-daily-operator-brief/daily-operator-brief.workflow.json",
+        "packages/workflow-daily-operator-brief/daily-operator-brief.workflow.metadata.json",
+        "packages/workflow-daily-operator-brief/daily-operator-brief.automation.json"
+      ]
+    },
+    "metadata": {
+      "name": "daily-operator-brief",
+      "displayName": "Daily Operator Brief",
+      "description": "Generate a daily operating summary across publishing, approvals, and system health.",
+      "author": "Phantasy Team",
+      "version": "0.1.0-beta",
+      "category": "operations",
+      "tags": [
+        "operations",
+        "daily",
+        "briefing",
+        "notifications"
+      ]
+    },
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/workflow-daily-operator-brief.git",
+      "cli": "phantasy extensions install workflow daily-operator-brief",
+      "direct": "git clone https://github.com/phantasy-bot/workflow-daily-operator-brief.git workflows/daily-operator-brief"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "monorepo",
+    "workspaceLabel": "Character",
+    "repoUrl": "https://github.com/phantasy-bot/companion",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/companion",
+    "detailPath": "/workflows/workflow-pngtuber-generation/",
+    "icon": null,
+    "kind": "workflow",
+    "slug": "workflow-pngtuber-generation",
+    "name": "pngtuber-generation",
+    "displayName": "PNGTuber Generation",
+    "description": "Generate or copy talking PNGTuber expression frames and patch the companion avatar config.",
+    "workspace": "character",
+    "extensionKind": "automation",
+    "author": "Phantasy Team",
+    "tags": [
+      "pngtuber",
+      "avatar",
+      "venice",
+      "image",
+      "vtuber"
+    ],
+    "category": "media",
+    "banner": null,
+    "syncMode": "source-extract",
+    "sourceExtract": {
+      "sourceFiles": [
+        "packages/workflow-pngtuber-generation/pngtuber-generation.workflow.json",
+        "packages/workflow-pngtuber-generation/pngtuber-generation.workflow.metadata.json"
+      ]
+    },
+    "metadata": {
+      "name": "pngtuber-generation",
+      "displayName": "PNGTuber Generation",
+      "description": "Generate or copy talking PNGTuber expression frames and patch the companion avatar config.",
+      "author": "Phantasy Team",
+      "version": "0.1.0-beta",
+      "workspace": "character",
+      "extensionKind": "automation",
+      "category": "media",
+      "tags": [
+        "pngtuber",
+        "avatar",
+        "venice",
+        "image",
+        "vtuber"
+      ]
+    },
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/companion.git",
+      "cli": "phantasy extensions install workflow pngtuber-generation",
+      "direct": "cp packages/workflow-pngtuber-generation/pngtuber-generation.workflow.json workflows/pngtuber-generation.workflow.json"
+    },
+    "profileImage": null
+  }
+]

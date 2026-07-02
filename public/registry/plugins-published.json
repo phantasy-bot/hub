@@ -1,0 +1,180 @@
+[
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Operations",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-monitoring",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-monitoring",
+    "detailPath": "/plugins/plugin-monitoring/",
+    "icon": null,
+    "slug": "plugin-monitoring",
+    "packageName": "@phantasy/plugin-monitoring",
+    "displayName": "Monitoring",
+    "description": "Installable monitoring plugin surface for Phantasy.",
+    "workspace": "operations",
+    "extensionKind": "capability",
+    "category": "observability",
+    "tags": [
+      "metrics",
+      "monitoring",
+      "analytics",
+      "logs"
+    ],
+    "permissions": [],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": true,
+    "runtimeLoadMode": "npm",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Monitoring",
+      "category": "observability",
+      "tags": [
+        "metrics",
+        "monitoring",
+        "analytics",
+        "logs"
+      ],
+      "workspace": "operations",
+      "extensionKind": "capability",
+      "permissions": [],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": true,
+      "adminSurface": {
+        "tabId": "monitoring",
+        "label": "Monitoring",
+        "workspace": "operations",
+        "kind": "generic",
+        "keywords": [
+          "metrics",
+          "monitoring",
+          "analytics",
+          "logs"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "monitoring",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "npm",
+      "source": "@phantasy/plugin-monitoring",
+      "cli": "phantasy extensions install plugin monitoring",
+      "direct": "npm install @phantasy/plugin-monitoring"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-x",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-x",
+    "detailPath": "/plugins/plugin-x/",
+    "icon": {
+      "assetPath": "/icons/brands/x.svg",
+      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "alt": "X",
+      "monochrome": true
+    },
+    "slug": "plugin-x",
+    "packageName": "@phantasy/plugin-x",
+    "displayName": "X (Twitter)",
+    "description": "Installable X/Twitter plugin surface for Phantasy.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "social",
+    "tags": [
+      "twitter",
+      "x",
+      "social-media",
+      "posting"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": true,
+    "runtimeLoadMode": "npm",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "X (Twitter)",
+      "category": "social",
+      "tags": [
+        "twitter",
+        "x",
+        "social-media",
+        "posting"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": true,
+      "adminSurface": {
+        "tabId": "x",
+        "label": "X (Twitter)",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "twitter",
+          "x",
+          "social-media",
+          "posting"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "x",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "npm",
+      "source": "@phantasy/plugin-x",
+      "cli": "phantasy extensions install plugin x",
+      "direct": "npm install @phantasy/plugin-x"
+    },
+    "profileImage": {
+      "assetPath": "/icons/brands/x.svg",
+      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "alt": "X",
+      "monochrome": true
+    }
+  }
+]

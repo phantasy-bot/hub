@@ -1,0 +1,97 @@
+.steezButtonPrimary {
+  padding: 8px 16px;
+  background: var(--interactive-primary-bg);
+  color: var(--interactive-primary-fg);
+  border: 1px solid var(--interactive-primary-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.steezButtonPrimary:hover:not(:disabled) {
+  background: var(--interactive-primary-bg-hover);
+  border-color: var(--interactive-primary-border);
+}
+
+.steezButtonSecondary {
+  padding: 8px 16px;
+  background: var(--interactive-secondary-bg);
+  color: var(--interactive-secondary-fg);
+  border: 1px solid var(--interactive-secondary-border);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.steezButtonSecondary:hover:not(:disabled) {
+  color: var(--interactive-secondary-fg);
+  background: var(--interactive-secondary-bg-hover);
+  border-color: var(--interactive-secondary-border-hover);
+}
+
+.steezToolbarButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--interactive-secondary-bg);
+  color: var(--interactive-secondary-fg);
+  border: 1px solid var(--interactive-secondary-border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.steezToolbarButton:hover:not(:disabled) {
+  background: var(--interactive-primary-bg);
+  border-color: var(--interactive-primary-border);
+  color: var(--interactive-primary-fg);
+}
+
+.steezDangerButton {
+  padding: 8px 16px;
+  background: var(--danger-bg);
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.steezDangerButton:hover:not(:disabled) {
+  background: var(--danger);
+  color: var(--text-on-accent);
+}
+
+.steezButtonSmall {
+  padding: 4px 10px;
+  font-size: 0.75rem;
+}
+
+.steezButtonLarge {
+  padding: 12px 24px;
+  font-size: 1rem;
+}
+
+.steezButtonPrimary:disabled,
+.steezButtonSecondary:disabled,
+.steezToolbarButton:disabled,
+.steezDangerButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+

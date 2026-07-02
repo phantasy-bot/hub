@@ -1,0 +1,14 @@
+{
+  "name": "phantasy-hub",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-03-15",
+  "routes": [
+    {
+      "pattern": "hub.phantasy.bot",
+      "custom_domain": true,
+    },
+  ],
+  "assets": {
+    "directory": "./public",
+  },
+}
