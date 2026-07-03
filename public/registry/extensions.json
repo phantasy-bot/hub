@@ -607,7 +607,7 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "standalone-repo",
+    "sourceOfTruth": "monorepo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-discord",
     "repoExists": true,
@@ -637,9 +637,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "standalone-repo",
-    "sourcePayload": "standalone-only",
-    "syncMode": "standalone-repo",
+    "sourceOwner": "monorepo",
+    "sourcePayload": "source-extract",
+    "syncMode": "source-extract",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1868,7 +1868,7 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "standalone-repo",
+    "sourceOfTruth": "monorepo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-telegram",
     "repoExists": true,
@@ -1899,9 +1899,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "standalone-repo",
-    "sourcePayload": "standalone-only",
-    "syncMode": "standalone-repo",
+    "sourceOwner": "monorepo",
+    "sourcePayload": "source-extract",
+    "syncMode": "source-extract",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1962,6 +1962,92 @@
       "alt": "Telegram",
       "monochrome": true
     }
+  },
+  {
+    "sourceOfTruth": "monorepo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-twilio",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-twilio",
+    "detailPath": "/plugins/plugin-twilio/",
+    "icon": null,
+    "slug": "plugin-twilio",
+    "packageName": "@phantasy/plugin-twilio",
+    "displayName": "Twilio SMS",
+    "description": "Twilio SMS and MMS messaging integration plugin for Phantasy companions.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "twilio",
+      "sms",
+      "messaging",
+      "phone"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "monorepo",
+    "sourcePayload": "source-extract",
+    "syncMode": "source-extract",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Twilio SMS",
+      "category": "messaging",
+      "tags": [
+        "twilio",
+        "sms",
+        "messaging",
+        "phone"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "twilio",
+        "label": "Twilio SMS",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "twilio",
+          "sms",
+          "messaging",
+          "phone"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "twilio",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-twilio.git",
+      "cli": "phantasy extensions install plugin twilio",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-twilio.git .phantasy/plugins/twilio"
+    },
+    "profileImage": null
   },
   {
     "sourceOfTruth": "standalone-repo",
@@ -2428,9 +2514,6 @@
     ],
     "category": "media",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/ascii-art"
-    },
     "homepage": "https://github.com/NousResearch/hermes-agent/tree/main/skills/creative/ascii-art",
     "banner": null,
     "repository": "https://github.com/NousResearch/hermes-agent",
@@ -2511,9 +2594,6 @@
     ],
     "category": "media",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/ascii-video"
-    },
     "homepage": "https://github.com/NousResearch/hermes-agent/tree/main/skills/creative/ascii-video",
     "banner": null,
     "repository": "https://github.com/NousResearch/hermes-agent",
@@ -2803,9 +2883,6 @@
     "tags": [],
     "category": "media",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/ffmpeg"
-    },
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-ffmpeg",
     "skillContent": "---\nname: ffmpeg\nversion: 0.1.0-beta\ndescription: \"FFmpeg — Use the command line for transcoding, trimming, muxing, extraction, and delivery-ready media exports.\"\nmetadata:\n  workspace: site\n  extensionKind: behavior\n  openclaw:\n    category: media\n    requires:\n      bins:\n        - ffmpeg\n    install:\n      - kind: brew\n        formula: ffmpeg\n        label: Install ffmpeg via Homebrew\n      - kind: apt\n        package: ffmpeg\n        label: Install ffmpeg via apt\n  agent:\n    triggers:\n      - \"ffmpeg\"\n      - \"transcode video\"\n      - \"trim audio\"\n      - \"extract frames\"\n      - \"mux audio\"\n      - \"convert media\"\n---\n\n# FFmpeg\n\nUse `ffmpeg` for practical media operations from the terminal: convert formats, trim clips, stitch assets, extract frames, and mux audio/video into release-ready outputs.\n\n## Installation\n\n```bash\n# macOS\nbrew install ffmpeg\n\n# Ubuntu / Debian\nsudo apt update\nsudo apt install -y ffmpeg\n```\n\n## Common Tasks\n\n```bash\n# Convert video format\nffmpeg -i input.mov output.mp4\n\n# Trim a clip\nffmpeg -ss 00:00:05 -to 00:00:20 -i input.mp4 -c copy trimmed.mp4\n\n# Extract audio\nffmpeg -i input.mp4 -vn -acodec copy output.m4a\n\n# Resize for web delivery\nffmpeg -i input.mp4 -vf scale=1280:-2 -c:v libx264 -crf 23 -preset medium output.mp4\n\n# Extract frames\nffmpeg -i input.mp4 frames/frame-%04d.png\n\n# Combine video and audio\nffmpeg -i video.mp4 -i narration.wav -c:v copy -c:a aac -shortest final.mp4\n```\n\n## Guidance\n\n- Prefer `-c copy` when you only need trimming or remuxing without re-encoding.\n- Use `libx264` plus a reasonable `-crf` value for broadly compatible MP4 exports.\n- Keep source files untouched and write outputs to new paths.\n- For long-running jobs, capture stderr to a log file if you need progress diagnostics.\n",
@@ -2879,9 +2956,6 @@
     ],
     "category": "integration",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/findmy"
-    },
     "homepage": "https://github.com/NousResearch/hermes-agent/tree/main/skills/apple/findmy",
     "banner": null,
     "repository": "https://github.com/NousResearch/hermes-agent",
@@ -3085,9 +3159,6 @@
     "tags": [],
     "category": "development",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/github"
-    },
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-github",
     "skillContent": "---\nname: github\nversion: 0.1.0-beta\ndescription: \"GitHub CLI — Manage GitHub issues, PRs, repos, and more from the command line.\"\nmetadata:\n  workspace: operations\n  extensionKind: integration\n  openclaw:\n    category: development\n    requires:\n      bins:\n        - gh\n    install:\n      - kind: brew\n        formula: gh\n        label: Install GitHub CLI (macOS/Linux)\n      - kind: node\n        package: github-cli\n        label: Install via npm\n  agent:\n    triggers:\n      - \"github\"\n      - \"github issue\"\n      - \"create pr\"\n      - \"pull request\"\n      - \"gh issue\"\n---\n\n# GitHub CLI (gh)\n\nManage GitHub issues, pull requests, repositories, and more from the command line.\n\n## Installation\n\n```bash\n# macOS\nbrew install gh\n\n# Linux\ncurl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg\necho \"deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main\" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null\nsudo apt update\nsudo apt install gh\n\n# Windows\nwinget install GitHub.cli\n```\n\n## Authentication\n\n```bash\ngh auth login\n```\n\n## Issues\n\n```bash\n# List issues\ngh issue list\n\n# Create issue\ngh issue create --title \"Bug: Login fails\" --body \"Steps to reproduce...\"\n\n# View issue\ngh issue view 123\n\n# Close issue\ngh issue close 123\n```\n\n## Pull Requests\n\n```bash\n# Create PR\ngh pr create --title \"Fix login bug\" --body \"This PR fixes...\"\n\n# List PRs\ngh pr list\ngh pr status\n\n# View PR\ngh pr view 45\n\n# Checkout PR locally\ngh pr checkout 45\n\n# Merge PR\ngh pr merge 45 --admin --squash\n```\n\n## Repositories\n\n```bash\n# Clone repo\ngh repo clone owner/repo\n\n# View repo info\ngh repo view\n\n# Create repo\ngh repo create my-new-repo --public\n```\n\n## Gists\n\n```bash\n# Create gist\necho \"hello world\" | gh gist create\n\n# List gists\ngh gist list\n```\n\n## Tips\n\n- Use `gh help` for full documentation\n- Use `--jq` for JSON output parsing\n- Use `--web` to open in browser\n",
@@ -4089,9 +4160,6 @@
     ],
     "category": "integration",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/imessage"
-    },
     "homepage": "https://github.com/NousResearch/hermes-agent/tree/main/skills/apple/imessage",
     "banner": null,
     "repository": "https://github.com/NousResearch/hermes-agent",
@@ -4214,9 +4282,6 @@
     ],
     "category": "media",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/manim-video"
-    },
     "homepage": "https://github.com/NousResearch/hermes-agent/tree/main/skills/creative/manim-video",
     "banner": null,
     "repository": "https://github.com/NousResearch/hermes-agent",
@@ -4451,9 +4516,6 @@
     "tags": [],
     "category": "development",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/phantasy-extension-authoring"
-    },
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-phantasy-extension-authoring",
     "skillContent": "---\nname: phantasy-extension-authoring\nversion: 0.1.0-beta\ndescription: \"Phantasy extension authoring guide for choosing and scaffolding plugins, skills, workflows, and MCP presets with the correct workspace taxonomy.\"\nmetadata:\n  workspace: operations\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"create plugin\"\n      - \"create skill\"\n      - \"create workflow\"\n      - \"phantasy extension\"\n      - \"scaffold extension\"\n---\n\n# Phantasy Extension Authoring\n\nUse this skill when the task is to create or update a Phantasy extension surface.\n\n## Choose The Right Surface\n\n- Build a `plugin` when you need runtime hooks, tools, integrations, or executable capability boundaries.\n- Build a `skill` when you need reusable instructions or workflow guidance for the agent without new runtime code.\n- Build a `workflow` when the output is a reusable automation graph in `.workflow.json`.\n\n## Preferred Commands\n\n```bash\nphantasy create plugin my-plugin --workspace operations --kind capability\nphantasy create skill my-skill --workspace character --kind behavior\nphantasy create workflow review-loop --template approval-loop\n```\n\n## Taxonomy Rules\n\n- Every first-party extension must declare an owning workspace: `character`, `site`, `business`, `operations`, or the Workflows workspace (internal id `automations`).\n- Use `capability` or `integration` for plugins, `behavior` for skills, and `automation` for workflows unless there is a strong reason otherwise.\n- Prefer workspace-owned directories over transport-specific dumping grounds.\n\n## Editing Guidance\n\n1. Start from the scaffold instead of copying ad hoc files.\n2. Keep the initial template lean; add scripts, references, or assets only when the extension genuinely needs them.\n3. Preserve explicit local developer power in dedicated developer paths instead of silently enabling privileged tools for beginner product shapes.\n",
@@ -4503,9 +4565,6 @@
     "tags": [],
     "category": "development",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/phantasy-product-architecture"
-    },
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-phantasy-product-architecture",
     "skillContent": "---\nname: phantasy-product-architecture\nversion: 0.1.0-beta\ndescription: \"Phantasy product architecture guide for workspace ownership, kernel versus product boundaries, taxonomy metadata, and correct feature placement across Character, Site, Business, Workflows, and Operations.\"\nmetadata:\n  workspace: operations\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"phantasy architecture\"\n      - \"workspace taxonomy\"\n      - \"where should this go\"\n      - \"feature placement\"\n      - \"kernel vs product\"\n      - \"product surface\"\n      - \"site workspace\"\n      - \"operations workspace\"\n      - \"business workspace\"\n      - \"character workspace\"\n      - \"workflows workspace\"\n---\n\n# Phantasy Product Architecture\n\nUse this skill when the task is to place, refactor, or name first-party Phantasy features.\n\n## Core Model\n\n- The repo is one flagship product: `WordPress for AI companions`.\n- The five primary workspaces are:\n  - `character`\n  - `site`\n  - `business`\n  - `workflows` (internal id `automations`)\n  - `operations`\n- `Notifications` is a launcher and inbox surface, not a sixth architecture domain.\n\n## Placement Rules\n\n1. Decide the owning workspace first.\n2. Decide whether the logic is:\n   - trusted kernel\n   - product surface\n   - extension surface\n3. Put domain logic before transport-specific wrappers.\n\nPrefer:\n\n- `workspaces/domain -> adapter surface`\n\nAvoid:\n\n- `admin-ui first -> domain later`\n- registry-only indirection when shared metadata would solve the problem\n\n## Kernel Versus Product\n\n- Kernel: provider contracts, config, memory/storage interfaces, workflow execution, plugin contracts, orchestration primitives.\n- Product: Character, Site, Business, Workflows, Operations features in admin UI, admin API, CLI, and public APIs.\n- Extensions: plugins, skills, workflows, packages.\n\n## Site-Specific Bias\n\nFor CMS and Site work:\n\n- Skills are `behavior`\n- Plugins are usually `capability` or `integration`\n- Workflows are `automation`\n\nKeep website/front-end rendering outside the first-party release surface; shared CMS features need a Site-domain model and public API contract.\n\n## Taxonomy References\n\n- `src/product/taxonomy.ts`\n- `src/product/taxonomy-validation.ts`\n- `src/plugins/content/plugin-metadata.ts`\n- `src/site/public-content-service.ts`\n\n## Naming Guidance\n\n- Use plain product language in user-facing surfaces.\n- Prefer `Content` over internal or poetic terms when the feature is really posts, pages, publishing, or CMS operations.\n- Remove release-surface aliases for retired first-party features, and keep labels, tabs, and docs on current product language.\n\n## Validation\n\nWhen moving or introducing product surfaces, verify:\n\n```bash\nbun run typecheck\nbun run validate:standards\n```\n",
@@ -4561,9 +4620,6 @@
     "tags": [],
     "category": "development",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/phantasy-site-building"
-    },
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-phantasy-site-building",
     "skillContent": "---\nname: phantasy-site-building\nversion: 0.1.0-beta\ndescription: \"Phantasy Site workspace guide for building headless CMS pages, posts, content APIs, media, and block-based publishing flows with the correct architecture.\"\nmetadata:\n  workspace: site\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"build site\"\n      - \"headless cms\"\n      - \"custom page\"\n      - \"blog post\"\n      - \"content studio\"\n      - \"content api\"\n      - \"cms\"\n      - \"wordpress like\"\n      - \"gutenberg\"\n      - \"custom block\"\n      - \"block editor\"\n      - \"template part\"\n      - \"phantasy site\"\n      - \"phantasy cms\"\n---\n\n# Phantasy Site Building\n\nUse this skill when the task is to build or refactor the Phantasy Site workspace, headless CMS editor, pages, posts, public content APIs, media attachments, or block-based publishing flows.\n\n## Product Framing\n\n- Treat this as the `Site` workspace for the flagship product, not a detached blog tool.\n- The companion is the protagonist; publishing and the CMS shell are supporting product surfaces around her.\n- Prefer domain-first CMS primitives over transport-first hacks.\n\n## Current Repo Shape\n\n- The current Site system is the source of truth for document editing, publishing, and public content APIs.\n- `Pages` and `Posts` live under the Site content model, not config-backed page blobs.\n- Draft sessions, checkpoints, revisions, activity, media attachments, and blocks remain first-class CMS infrastructure.\n- Bundled frontend delivery is out of scope for this repo; keep external frontends user-owned.\n\n## Key Files\n\n- Draft/worktree + git-backed editing: `src/site/workspace-service.ts`\n- Site settings/types/schema: `src/site/types.ts`, `src/site/schemas.ts`\n- Site admin API: `src/admin-api/routes/site/site-routes.ts`\n- Public content APIs: `src/site/public-content-service.ts`, `src/server/routes/public-api-routes.ts`\n- Block registry and HTML rendering: `src/site/block-registry.ts`\n- Site admin UI: `src/admin-ui/components/tabs/SiteTab.tsx`\n\n## Working Rules\n\n1. Keep the Site workspace focused on CMS metadata, documents, media, checkpoints, revisions, drafts, publishing, and public read APIs.\n2. Keep pages/posts as first-class site documents and avoid reintroducing config-backed page storage.\n3. If adding a new first-party CMS feature, assign explicit Site workspace ownership and keep taxonomy metadata consistent.\n4. Keep the public API stable for both structured `blocks` and rendered HTML `content`.\n5. Treat frontend stacks as user-owned consumers of the headless APIs.\n\n## Current Constraints To Remember\n\n- Site drafts are git-backed; autosave is file persistence, while checkpoints are explicit draft-branch commits.\n- `SiteSettings` should stay CMS metadata only: title, description, and language.\n- Removed presentation config fields should not be generated, accepted in new schemas, or documented.\n- Import and migration work should land on the current Site document/API path only.\n\n## Preferred Direction\n\nWhen improving the CMS, bias toward this architecture:\n\n- Unify posts and pages into one Site-owned content model.\n- Introduce explicit body formats or a canonical `body` object instead of ambiguous raw strings.\n- Move toward block-capable content documents.\n- Render document bodies through shared block helpers for the `content` HTML response.\n- Preserve structured `blocks` in public responses so external frontends can render with their own components.\n\n## Blocks Guidance\n\nIf the task mentions blocks, Gutenberg-like editing, or custom page building:\n\n1. Start with a block registry and a renderer contract before building lots of block types.\n2. Keep block definitions explicit: `type`, attributes, allowed children, and render behavior.\n3. Support a migration path from current HTML and Markdown content.\n4. Add a small core block set first:\n   - paragraph\n   - heading\n   - image\n   - quote\n   - list\n   - code\n   - divider\n   - button\n   - group\n   - columns\n   - embed\n   - custom-html\n5. Make advanced blocks such as `custom-html` or script/embed surfaces privileged and explicit.\n6. Prefer plugin-extensible blocks over hardcoding every block in the core editor.\n\n## Editing Workflow\n\n1. Identify whether the task belongs in Site settings, document editing, publishing, media, public API, or block infrastructure.\n2. Inspect the existing CMS and content path before patching:\n   - storage model\n   - admin edit surface\n   - public API shape\n   - publish/visibility rules\n3. If changing CMS data shape, update:\n   - TypeScript types\n   - admin API routes\n   - UI editor/controller\n   - public content API\n   - relevant tests and generated docs\n4. Do not preserve retired frontend delivery or presentation config paths.\n\n## Avoid\n\n- Treating config-backed pages as the final CMS architecture.\n- Adding page-specific inline logic that should live in a renderer or block registry.\n- Mixing frontend presentation concerns with storage or content-type policy.\n- Giving unrestricted script execution to regular content authors by default.\n- Reintroducing bundled frontend delivery or visual editing shells.\n\n## Validation\n\nPrefer targeted validation after CMS/site changes:\n\n```bash\nbun run test:core -- src/site\nbun run test:core -- src/admin-api/routes/site\nbun run test:ui:components -- src/admin-ui/components/tabs/site\nbun run validate:standards\nbun run typecheck\n```\n\nIf the change touches broad CMS flows, also verify:\n\n```bash\nbun run test\n```\n",
@@ -4700,9 +4756,6 @@
     ],
     "category": "publishing",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/research-paper-writing"
-    },
     "homepage": "https://github.com/NousResearch/hermes-agent/tree/main/skills/research/research-paper-writing",
     "banner": null,
     "repository": "https://github.com/NousResearch/hermes-agent",
@@ -5742,9 +5795,6 @@
     ],
     "category": "ai-provider",
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceDir": "skills/xai-grok"
-    },
     "homepage": "https://x.ai/news/grok-hermes",
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-xai-grok",
@@ -5812,12 +5862,6 @@
     "category": "approvals",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-approval-loop/approval-loop.workflow.json",
-        "packages/workflow-approval-loop/approval-loop.workflow.metadata.json"
-      ]
-    },
     "metadata": {
       "name": "approval-loop",
       "displayName": "Approval Loop",
@@ -5866,13 +5910,6 @@
     "category": "content",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-content-pipeline/content-pipeline.workflow.json",
-        "packages/workflow-content-pipeline/content-pipeline.workflow.metadata.json",
-        "packages/workflow-content-pipeline/content-pipeline.automation.json"
-      ]
-    },
     "metadata": {
       "name": "content-pipeline",
       "displayName": "Content Pipeline",
@@ -5921,13 +5958,6 @@
     "category": "operations",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-daily-operator-brief/daily-operator-brief.workflow.json",
-        "packages/workflow-daily-operator-brief/daily-operator-brief.workflow.metadata.json",
-        "packages/workflow-daily-operator-brief/daily-operator-brief.automation.json"
-      ]
-    },
     "metadata": {
       "name": "daily-operator-brief",
       "displayName": "Daily Operator Brief",
@@ -5971,6 +6001,7 @@
     "tags": [
       "pngtuber",
       "avatar",
+      "alkahest",
       "venice",
       "image",
       "vtuber"
@@ -5978,12 +6009,6 @@
     "category": "media",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-pngtuber-generation/pngtuber-generation.workflow.json",
-        "packages/workflow-pngtuber-generation/pngtuber-generation.workflow.metadata.json"
-      ]
-    },
     "metadata": {
       "name": "pngtuber-generation",
       "displayName": "PNGTuber Generation",
@@ -5996,6 +6021,7 @@
       "tags": [
         "pngtuber",
         "avatar",
+        "alkahest",
         "venice",
         "image",
         "vtuber"

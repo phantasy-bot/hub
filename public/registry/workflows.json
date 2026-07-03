@@ -26,12 +26,6 @@
     "category": "approvals",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-approval-loop/approval-loop.workflow.json",
-        "packages/workflow-approval-loop/approval-loop.workflow.metadata.json"
-      ]
-    },
     "metadata": {
       "name": "approval-loop",
       "displayName": "Approval Loop",
@@ -80,13 +74,6 @@
     "category": "content",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-content-pipeline/content-pipeline.workflow.json",
-        "packages/workflow-content-pipeline/content-pipeline.workflow.metadata.json",
-        "packages/workflow-content-pipeline/content-pipeline.automation.json"
-      ]
-    },
     "metadata": {
       "name": "content-pipeline",
       "displayName": "Content Pipeline",
@@ -135,13 +122,6 @@
     "category": "operations",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-daily-operator-brief/daily-operator-brief.workflow.json",
-        "packages/workflow-daily-operator-brief/daily-operator-brief.workflow.metadata.json",
-        "packages/workflow-daily-operator-brief/daily-operator-brief.automation.json"
-      ]
-    },
     "metadata": {
       "name": "daily-operator-brief",
       "displayName": "Daily Operator Brief",
@@ -185,6 +165,7 @@
     "tags": [
       "pngtuber",
       "avatar",
+      "alkahest",
       "venice",
       "image",
       "vtuber"
@@ -192,12 +173,6 @@
     "category": "media",
     "banner": null,
     "syncMode": "source-extract",
-    "sourceExtract": {
-      "sourceFiles": [
-        "packages/workflow-pngtuber-generation/pngtuber-generation.workflow.json",
-        "packages/workflow-pngtuber-generation/pngtuber-generation.workflow.metadata.json"
-      ]
-    },
     "metadata": {
       "name": "pngtuber-generation",
       "displayName": "PNGTuber Generation",
@@ -210,6 +185,7 @@
       "tags": [
         "pngtuber",
         "avatar",
+        "alkahest",
         "venice",
         "image",
         "vtuber"

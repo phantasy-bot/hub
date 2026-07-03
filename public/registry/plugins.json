@@ -276,7 +276,7 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "standalone-repo",
+    "sourceOfTruth": "monorepo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-discord",
     "repoExists": true,
@@ -306,9 +306,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "standalone-repo",
-    "sourcePayload": "standalone-only",
-    "syncMode": "standalone-repo",
+    "sourceOwner": "monorepo",
+    "sourcePayload": "source-extract",
+    "syncMode": "source-extract",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1537,7 +1537,7 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "standalone-repo",
+    "sourceOfTruth": "monorepo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-telegram",
     "repoExists": true,
@@ -1568,9 +1568,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "standalone-repo",
-    "sourcePayload": "standalone-only",
-    "syncMode": "standalone-repo",
+    "sourceOwner": "monorepo",
+    "sourcePayload": "source-extract",
+    "syncMode": "source-extract",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1631,6 +1631,92 @@
       "alt": "Telegram",
       "monochrome": true
     }
+  },
+  {
+    "sourceOfTruth": "monorepo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-twilio",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-twilio",
+    "detailPath": "/plugins/plugin-twilio/",
+    "icon": null,
+    "slug": "plugin-twilio",
+    "packageName": "@phantasy/plugin-twilio",
+    "displayName": "Twilio SMS",
+    "description": "Twilio SMS and MMS messaging integration plugin for Phantasy companions.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "messaging",
+    "tags": [
+      "twilio",
+      "sms",
+      "messaging",
+      "phone"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "monorepo",
+    "sourcePayload": "source-extract",
+    "syncMode": "source-extract",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Twilio SMS",
+      "category": "messaging",
+      "tags": [
+        "twilio",
+        "sms",
+        "messaging",
+        "phone"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "twilio",
+        "label": "Twilio SMS",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "twilio",
+          "sms",
+          "messaging",
+          "phone"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "twilio",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-twilio.git",
+      "cli": "phantasy extensions install plugin twilio",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-twilio.git .phantasy/plugins/twilio"
+    },
+    "profileImage": null
   },
   {
     "sourceOfTruth": "standalone-repo",
