@@ -109,8 +109,19 @@
   </span>
 </label>
           <div class="viewToggleGroup" role="group" aria-label="Catalog view">
-  <button class="viewToggle" type="button" data-catalog-view-target="list"><span class="controlLabel">List</span><span class="controlShort" aria-hidden="true">L</span></button>
-  <button class="viewToggle" type="button" data-catalog-view-target="grid"><span class="controlLabel">Grid</span><span class="controlShort" aria-hidden="true">G</span></button>
+  <button class="viewToggle" type="button" data-catalog-view-target="list" aria-label="List view" title="List view">
+    <svg class="viewToggleIcon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+      <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </button>
+  <button class="viewToggle" type="button" data-catalog-view-target="grid" aria-label="Grid view" title="Grid view">
+    <svg class="viewToggleIcon" viewBox="0 0 24 24" aria-hidden="true" fill="none">
+      <rect x="3" y="3" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="14" y="3" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="3" y="14" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
+      <rect x="14" y="14" width="7" height="7" rx="1.2" stroke="currentColor" stroke-width="1.8"/>
+    </svg>
+  </button>
 </div>
         </div>
 <div class="introUtility">

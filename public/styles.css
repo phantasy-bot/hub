@@ -318,7 +318,6 @@ body:not([data-page-kind="home"]) .content {
 }
 
 .commandButton,
-.viewToggle,
 .themeToggle,
 .sidebarToggle,
 .textLink,
@@ -343,10 +342,32 @@ body:not([data-page-kind="home"]) .content {
     transform 0.15s ease;
 }
 
+/* Grid / list: icon-only, no chrome */
+.viewToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  min-height: 2rem;
+  padding: 0;
+  border: none;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.viewToggleIcon {
+  display: block;
+  width: 1.15rem;
+  height: 1.15rem;
+  flex: 0 0 auto;
+}
+
 .commandButton:hover,
 .commandButton:focus-visible,
-.viewToggle:hover,
-.viewToggle:focus-visible,
 .themeToggle:hover,
 .themeToggle:focus-visible,
 .sidebarToggle:hover,
@@ -363,6 +384,19 @@ body:not([data-page-kind="home"]) .content {
   background: var(--interactive-secondary-bg-hover);
   color: var(--text-primary);
   outline: none;
+}
+
+.viewToggle:hover,
+.viewToggle:focus-visible {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  outline: none;
+}
+
+.viewToggle:focus-visible {
+  outline: 1px solid color-mix(in srgb, var(--text-primary) 45%, transparent);
+  outline-offset: 2px;
 }
 
 .commandButton {
@@ -428,9 +462,22 @@ body[data-sidebar-state="collapsed"] .sidebarToggleIcon {
 
 .viewToggleGroup {
   flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.1rem;
 }
 
-.viewToggle[data-active="true"],
+.viewToggle[data-active="true"] {
+  color: var(--text-primary);
+  border: none;
+  background: transparent;
+  opacity: 1;
+}
+
+.viewToggle:not([data-active="true"]) {
+  opacity: 0.55;
+}
+
 .browseTab[data-active="true"] {
   color: var(--text-primary);
   border-color: var(--color-border-default);
