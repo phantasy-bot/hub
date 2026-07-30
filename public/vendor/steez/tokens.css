@@ -6,7 +6,7 @@
  * - landing page
  * - hub registry surfaces
  * - docs aliases
- * - Party Quest base shell
+ * - Party base shell
  */
 
 :root {
@@ -314,7 +314,7 @@
   --scrollbar-thumb-hover: #5a5a5a;
   --brand-monochrome-filter: invert(1);
 
-  /* Party Quest stat aliases */
+  /* Party stat aliases */
   --color-stat-hp: var(--danger);
   --color-stat-hp-rgb: var(--danger-rgb);
   --color-stat-mp: var(--color-light-gray);
