@@ -1479,14 +1479,14 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-polymarket",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.2-beta",
+    "version": "0.2.0-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-polymarket",
     "detailPath": "/plugins/plugin-polymarket/",
     "icon": null,
     "slug": "plugin-polymarket",
     "packageName": "@phantasy/plugin-polymarket",
     "displayName": "Polymarket",
-    "description": "Polymarket prediction markets: public search, prices, and order books (research-first).",
+    "description": "Polymarket prediction markets: public research tools and gated CLOB trading.",
     "workspace": "business",
     "extensionKind": "integration",
     "category": "markets",
@@ -1528,7 +1528,7 @@
       "platforms": [
         "node"
       ],
-      "productionReady": false,
+      "productionReady": true,
       "adminSurface": {
         "tabId": "polymarket",
         "label": "Polymarket",
