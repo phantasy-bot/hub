@@ -1355,7 +1355,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.2.0-beta",
+    "version": "0.2.1-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "detailPath": "/plugins/plugin-kalshi/",
     "icon": null,
@@ -1418,13 +1418,15 @@
         "properties": {
           "enabled": {
             "type": "boolean",
-            "default": true
+            "default": true,
+            "title": "Enabled",
+            "description": "Load Kalshi tools and admin surface."
           },
-          "apiKey": {
-            "type": "string"
-          },
-          "privateKeyPem": {
-            "type": "string"
+          "allowTrading": {
+            "type": "boolean",
+            "default": false,
+            "title": "Allow trading",
+            "description": "When on, order tools may place and cancel live orders. Toggle anytime in Admin → Plugins → Kalshi."
           },
           "environment": {
             "type": "string",
@@ -1432,11 +1434,18 @@
               "demo",
               "production"
             ],
-            "default": "demo"
+            "default": "demo",
+            "title": "Environment"
           },
-          "allowTrading": {
-            "type": "boolean",
-            "default": false
+          "apiKey": {
+            "type": "string",
+            "title": "API key ID",
+            "format": "password"
+          },
+          "privateKeyPem": {
+            "type": "string",
+            "title": "RSA private key (PEM)",
+            "format": "pem"
           }
         }
       }
@@ -1801,7 +1810,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-polymarket",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.1-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-polymarket",
     "detailPath": "/plugins/plugin-polymarket/",
     "icon": null,
@@ -1868,29 +1877,38 @@
         "properties": {
           "enabled": {
             "type": "boolean",
-            "default": true
-          },
-          "gammaBaseUrl": {
-            "type": "string",
-            "default": "https://gamma-api.polymarket.com"
-          },
-          "clobBaseUrl": {
-            "type": "string",
-            "default": "https://clob.polymarket.com"
-          },
-          "privateKey": {
-            "type": "string"
-          },
-          "funderAddress": {
-            "type": "string"
-          },
-          "chainId": {
-            "type": "number",
-            "default": 137
+            "default": true,
+            "title": "Enabled"
           },
           "allowTrading": {
             "type": "boolean",
-            "default": false
+            "default": false,
+            "title": "Allow trading",
+            "description": "When on, order tools may place CLOB trades. Toggle anytime in Admin → Plugins → Polymarket."
+          },
+          "privateKey": {
+            "type": "string",
+            "title": "Trading private key",
+            "format": "password"
+          },
+          "funderAddress": {
+            "type": "string",
+            "title": "Funder address"
+          },
+          "chainId": {
+            "type": "number",
+            "default": 137,
+            "title": "Chain ID"
+          },
+          "gammaBaseUrl": {
+            "type": "string",
+            "default": "https://gamma-api.polymarket.com",
+            "title": "Gamma API URL"
+          },
+          "clobBaseUrl": {
+            "type": "string",
+            "default": "https://clob.polymarket.com",
+            "title": "CLOB API URL"
           }
         }
       }
