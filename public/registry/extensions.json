@@ -1355,7 +1355,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.2.0-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "detailPath": "/plugins/plugin-kalshi/",
     "icon": null,
@@ -1400,7 +1400,7 @@
       "platforms": [
         "node"
       ],
-      "productionReady": false,
+      "productionReady": true,
       "adminSurface": {
         "tabId": "kalshi",
         "label": "Kalshi",
@@ -1419,6 +1419,24 @@
           "enabled": {
             "type": "boolean",
             "default": true
+          },
+          "apiKey": {
+            "type": "string"
+          },
+          "privateKeyPem": {
+            "type": "string"
+          },
+          "environment": {
+            "type": "string",
+            "enum": [
+              "demo",
+              "production"
+            ],
+            "default": "demo"
+          },
+          "allowTrading": {
+            "type": "boolean",
+            "default": false
           }
         }
       }
@@ -1828,15 +1846,11 @@
       "permissions": [
         "internet"
       ],
-      "pluginDependencies": [
-        {
-          "plugin": "@phantasy/plugin-wallet"
-        }
-      ],
+      "pluginDependencies": [],
       "platforms": [
         "node"
       ],
-      "productionReady": false,
+      "productionReady": true,
       "adminSurface": {
         "tabId": "polymarket",
         "label": "Polymarket",
@@ -1855,6 +1869,28 @@
           "enabled": {
             "type": "boolean",
             "default": true
+          },
+          "gammaBaseUrl": {
+            "type": "string",
+            "default": "https://gamma-api.polymarket.com"
+          },
+          "clobBaseUrl": {
+            "type": "string",
+            "default": "https://clob.polymarket.com"
+          },
+          "privateKey": {
+            "type": "string"
+          },
+          "funderAddress": {
+            "type": "string"
+          },
+          "chainId": {
+            "type": "number",
+            "default": 137
+          },
+          "allowTrading": {
+            "type": "boolean",
+            "default": false
           }
         }
       }

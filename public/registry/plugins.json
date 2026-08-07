@@ -1024,14 +1024,14 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.2.0-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "detailPath": "/plugins/plugin-kalshi/",
     "icon": null,
     "slug": "plugin-kalshi",
     "packageName": "@phantasy/plugin-kalshi",
     "displayName": "Kalshi",
-    "description": "Kalshi prediction-market integration plugin for Phantasy.",
+    "description": "Kalshi prediction markets: search, portfolio, and gated order placement.",
     "workspace": "business",
     "extensionKind": "integration",
     "category": "markets",
@@ -1069,7 +1069,7 @@
       "platforms": [
         "node"
       ],
-      "productionReady": false,
+      "productionReady": true,
       "adminSurface": {
         "tabId": "kalshi",
         "label": "Kalshi",
@@ -1077,10 +1077,10 @@
         "kind": "generic",
         "keywords": [
           "kalshi",
-          "prediction-markets",
-          "trading",
+          "prediction markets",
           "finance"
-        ]
+        ],
+        "advancedModule": "prediction-markets"
       },
       "configSchema": {
         "type": "object",
@@ -1088,6 +1088,24 @@
           "enabled": {
             "type": "boolean",
             "default": true
+          },
+          "apiKey": {
+            "type": "string"
+          },
+          "privateKeyPem": {
+            "type": "string"
+          },
+          "environment": {
+            "type": "string",
+            "enum": [
+              "demo",
+              "production"
+            ],
+            "default": "demo"
+          },
+          "allowTrading": {
+            "type": "boolean",
+            "default": false
           }
         }
       }
@@ -1459,7 +1477,7 @@
     "slug": "plugin-polymarket",
     "packageName": "@phantasy/plugin-polymarket",
     "displayName": "Polymarket",
-    "description": "Polymarket prediction-market integration plugin for Phantasy.",
+    "description": "Polymarket prediction markets: search, prices, order books, and gated trading.",
     "workspace": "business",
     "extensionKind": "integration",
     "category": "markets",
@@ -1497,15 +1515,11 @@
       "permissions": [
         "internet"
       ],
-      "pluginDependencies": [
-        {
-          "plugin": "@phantasy/plugin-wallet"
-        }
-      ],
+      "pluginDependencies": [],
       "platforms": [
         "node"
       ],
-      "productionReady": false,
+      "productionReady": true,
       "adminSurface": {
         "tabId": "polymarket",
         "label": "Polymarket",
@@ -1513,10 +1527,10 @@
         "kind": "generic",
         "keywords": [
           "polymarket",
-          "prediction-markets",
-          "trading",
+          "prediction markets",
           "finance"
-        ]
+        ],
+        "advancedModule": "prediction-markets"
       },
       "configSchema": {
         "type": "object",
@@ -1524,6 +1538,28 @@
           "enabled": {
             "type": "boolean",
             "default": true
+          },
+          "gammaBaseUrl": {
+            "type": "string",
+            "default": "https://gamma-api.polymarket.com"
+          },
+          "clobBaseUrl": {
+            "type": "string",
+            "default": "https://clob.polymarket.com"
+          },
+          "privateKey": {
+            "type": "string"
+          },
+          "funderAddress": {
+            "type": "string"
+          },
+          "chainId": {
+            "type": "number",
+            "default": 137
+          },
+          "allowTrading": {
+            "type": "boolean",
+            "default": false
           }
         }
       }
