@@ -1,6 +1,61 @@
 [
   {
     "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Workflows",
+    "repoUrl": "https://github.com/phantasy-bot/skill-amazon-shopping",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/skill-amazon-shopping",
+    "detailPath": "/skills/skill-amazon-shopping/",
+    "icon": null,
+    "kind": "skill",
+    "slug": "skill-amazon-shopping",
+    "name": "amazon-shopping",
+    "displayName": "Amazon Shopping",
+    "description": "Search Amazon for household restock via the amazon-cart MCP server, attach recommendations to shopping-list.json, and prepare approval-gated cart actions without leaking session credentials.",
+    "workspace": "automations",
+    "extensionKind": "integration",
+    "author": "Phantasy Team",
+    "tags": [
+      "amazon",
+      "shopping",
+      "commerce",
+      "mcp",
+      "household"
+    ],
+    "category": "skill",
+    "syncMode": "source-extract",
+    "homepage": "https://github.com/madebydia/amazon-mcp-server",
+    "banner": null,
+    "repository": "https://github.com/phantasy-bot/skill-amazon-shopping",
+    "skillContent": "---\nname: amazon-shopping\nversion: 0.1.0-beta\ndescription: \"Search Amazon for household restock via the amazon-cart MCP server, attach recommendations to shopping-list.json, and prepare approval-gated cart actions without leaking session credentials.\"\nhomepage: https://github.com/madebydia/amazon-mcp-server\ntags:\n  - amazon\n  - shopping\n  - commerce\n  - mcp\n  - household\nmetadata:\n  workspace: automations\n  extensionKind: integration\n  agent:\n    triggers:\n      - \"amazon\"\n      - \"amazon cart\"\n      - \"search amazon\"\n      - \"subscribe and save\"\n      - \"reorder\"\n      - \"shopping list\"\n      - \"add to cart\"\n---\n\n# Amazon Shopping\n\nUse this skill when the user wants MAID to find Amazon products for household\nrestock, compare options, or (when explicitly enabled) add items to a cart.\n\n## Boundary\n\n- This skill teaches the workflow. Executable tools come from the `amazon-cart` MCP preset.\n- Household shopping state lives in `households/{householdId}/shopping-list.json`.\n- On-hand stock and par levels live in `households/{householdId}/inventory.json`.\n- **V1 default:** search and recommend only. Do not call `add_to_cart` unless the\n  operator enabled the tool and per-user Amazon auth is in place.\n- Subscribe & Save is **not** available in upstream amazon-mcp-server today.\n\n## Disclaimer\n\nThe amazon-cart MCP uses browser automation against Amazon.com. It is for\n**personal, educational use**. Users must comply with [Amazon's Terms of Service](https://www.amazon.com/gp/help/customer/display.html?nodeId=508088).\nPhantasy does not operate a multi-tenant Amazon integration.\n\n## Setup checklist\n\n1. Clone [madebydia/amazon-mcp-server](https://github.com/madebydia/amazon-mcp-server)\n2. `npm install && npm run build`\n3. Set env vars:\n   - `AMAZON_MCP_SERVER_PATH` — absolute path to the clone\n   - `AMAZON_MCP_AUTH_TOKEN` — `openssl rand -hex 32`\n4. First login: run with `HEADLESS=false`, sign into Amazon in the opened browser\n5. Enable the `amazon-cart` MCP preset in agent config (`optionalMcpServers` + `mcpServers`)\n6. Keep `disabledTools: [\"add_to_cart\"]` until per-user auth ships\n\n## Available MCP tools\n\n| Tool            | V1 use                                                                 |\n| --------------- | ---------------------------------------------------------------------- |\n| `search_amazon` | Yes — find products for shopping-list items                            |\n| `check_login`   | Yes — verify session before search                                     |\n| `view_cart`     | Optional — read-only cart review                                       |\n| `add_to_cart`   | **Disabled by default** — requires explicit operator enable + approval |\n\n## Recommended flow\n\n1. Read `shopping-list.json` for items with `status: needed` or `recommended`.\n2. For `preferredRetailer: amazon` (or when the user asks), run `check_login`.\n3. Call `search_amazon` with a concise query (brand + size when known).\n4. Present top 1–3 options with price and rationale.\n5. PATCH the shopping-list item `recommendation` field:\n   `{ asin, title, price, url }` and set `status: recommended`.\n6. Tell the user the pick is on the Needed tab in `/inventory`.\n7. Ask for approval before any cart or checkout action.\n\n## Sync with inventory\n\nWhen inventory `quantity < parLevel` (or `quantity <= 1` without par), upsert a\nshopping-list entry via `POST /api/household/shopping-list/sync` or filesystem\nupdate with `source: low-stock` and `linkedInventoryId`.\n\n## Phase 2 roadmap\n\n- Per-user Amazon sessions (OAuth or encrypted cookie vault per `memberId`)\n- Re-enable `add_to_cart` behind `approvals.mode: ask`\n- Subscribe & Save tool (upstream MCP contribution or Phantasy puppeteer plugin)\n- Order status feedback into `status: ordered`\n",
+    "metadata": {
+      "workspace": "automations",
+      "extensionKind": "integration",
+      "agent": {
+        "triggers": [
+          "amazon",
+          "amazon cart",
+          "search amazon",
+          "subscribe and save",
+          "reorder",
+          "shopping list",
+          "add to cart"
+        ]
+      }
+    },
+    "ownerKind": "first-party",
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/skill-amazon-shopping.git",
+      "cli": "phantasy extensions install skill amazon-shopping",
+      "direct": "git clone https://github.com/phantasy-bot/skill-amazon-shopping.git skills/amazon-shopping"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Site",
     "repoUrl": "https://github.com/phantasy-bot/skill-ascii-art",
     "repoExists": true,
@@ -181,6 +236,40 @@
   },
   {
     "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Operations",
+    "repoUrl": "https://github.com/phantasy-bot/skill-btc-15m-desk",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.17-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/skill-btc-15m-desk",
+    "detailPath": "/skills/skill-btc-15m-desk/",
+    "icon": null,
+    "kind": "skill",
+    "slug": "skill-btc-15m-desk",
+    "name": "btc-15m-desk",
+    "displayName": "Btc 15m Desk",
+    "description": "Research and agentically trade short-horizon crypto binaries (and discover perps) with paper/per-item/auto approvals.",
+    "workspace": "operations",
+    "extensionKind": "behavior",
+    "author": "Phantasy Team",
+    "tags": [],
+    "category": "skill",
+    "syncMode": "source-extract",
+    "banner": null,
+    "repository": "https://github.com/phantasy-bot/skill-btc-15m-desk",
+    "skillContent": "---\nname: btc-15m-desk\ndescription: Research and agentically trade short-horizon crypto binaries (and discover perps) with paper/per-item/auto approvals.\n---\n\n# Crypto Short Desk + Agentic Trading\n\n## Markets\n\n| Instrument  | Polymarket                        | Kalshi                         |\n| ----------- | --------------------------------- | ------------------------------ |\n| BTC/ETH 5m  | Yes                               | No public 5m series            |\n| BTC/ETH 15m | Yes                               | Yes (`KXBTC15M`, `KXETH15M`)   |\n| Perps       | Discover + live via proxy session | Discover + live when margin on |\n\n## Research tools\n\n| Tool                                                                 | Purpose           |\n| -------------------------------------------------------------------- | ----------------- |\n| `btc15m_catalog` / `btc15m_explore` / `btc15m_search`                | Discovery         |\n| `btc15m_tick` / `btc15m_kalshi_tick`                                 | Live + lag signal |\n| `btc15m_simulate` / `btc15m_historical` / `btc15m_kalshi_historical` | Expectancy + fees |\n| `btc15m_fee_quote`                                                   | Fee estimates     |\n| `btc15m_perps_discover`                                              | Perps catalogs    |\n\nScripts: `bun scripts/five-dollar-paper.mjs`, `bun scripts/btc15m-live-canary.mjs`, and `bun scripts/polymarket-5m-paper.mjs` are optional research paths. The active hosted execution path is `node scripts/kalshi-15m-live.mjs` for the persistent guarded Kalshi 15m runner.\n\n## Agentic execution tools\n\n| Tool                                  | Purpose                                                  |\n| ------------------------------------- | -------------------------------------------------------- |\n| `trade_set_policy`                    | `paper` \\| `per_item` \\| `auto` \\| `deny` + risk + creds |\n| `trade_get_policy`                    | Redacted policy                                          |\n| `trade_get_strategies`                | Approved strategy profiles + selection mode              |\n| `trade_get_portfolio`                 | Cash, principal, treasury, risk budget, positions        |\n| `trade_sync_secrets`                  | Env + plugin configs → broker                            |\n| `trade_submit`                        | Intent (queues or executes); pass `visibleDepth` live    |\n| `trade_from_desk_signal`              | 1-contract lag → submit                                  |\n| `trade_approve` / `trade_approve_all` | Per-item approval                                        |\n| `trade_reject` / `trade_list`         | Reject / journal                                         |\n| `trade_perps_create_proxy`            | PM perps proxy session                                   |\n| `trade_capabilities`                  | Honest capability matrix                                 |\n\nAdmin: **Business → Trade queue** for pending approvals + safe mode/live toggles.\n\nCLI (server session preferred):\n\n```bash\nphantasy login --url http://127.0.0.1:2000\nphantasy trade status\nphantasy trade list --status pending_approval\nphantasy trade approve <id>\nphantasy trade policy --mode per_item\n# Same-process as CLI chat only:\nphantasy trade --local list\n```\n\n### Modes\n\n- **paper** (default): simulate only\n- **per_item**: must approve each order (tools or Admin UI)\n- **auto**: execute on submit (live only if `allowLiveTrading`)\n- **deny**: block all\n\nDefaults: **$5** notional, **1** contract, max leverage **2**, **requireDepth** for live.\n\n### Live checklist\n\n1. `trade_set_policy mode=per_item` (or auto)\n2. `allowLiveTrading=true` only with real keys\n3. Kalshi: `KALSHI_*` env, prefer **demo**\n4. Polymarket binary: private key\n5. Pass `visibleDepth` on live submits (book size at limit)\n6. Perps: `allowPerps=true`; Kalshi margin and/or `trade_perps_create_proxy` for PM\n\n## Strategies\n\n1. **lag_confirm** — preferred for $5\n2. **swing_recovery** — sell enough bid-side shares to recover entry cost, then free-roll residual shares\n3. **dual_side_arb** — fee-aware; rejects ghost sub-0.05 asks and &lt;90s left\n\nOperators approve profiles in the Trading desk. The agent may choose only from\nthat approved list; `forced` mode pins one profile. Paper capital starts at $5\nby default, principal is protected once returned to cash, and later realized\nwinnings split 50/50 between treasury and risk budget.\n\n## Limitations (do not ignore)\n\nFull matrix: `src/services/trading/agentic/LIMITATIONS.md` and docs guide `guides/agentic-trading`.\n\n- No guaranteed profit\n- PM perps needs invite + proxy session\n- Paper fills ≠ fillable depth (live binaries auto-fetch book; perps need explicit depth)\n- Broker queue/policy/secrets persist under `.phantasy/trading/`\n\n## Operator ladder\n\npaper → choose profiles → guarded Kalshi 15m runner → Kalshi demo → tiny prod on an eligible host → perps last\n",
+    "metadata": {},
+    "ownerKind": "first-party",
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/skill-btc-15m-desk.git",
+      "cli": "phantasy extensions install skill btc-15m-desk",
+      "direct": "git clone https://github.com/phantasy-bot/skill-btc-15m-desk.git skills/btc-15m-desk"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Site",
     "repoUrl": "https://github.com/phantasy-bot/skill-clip-studio-video",
     "repoExists": false,
@@ -190,7 +279,7 @@
     "detailPath": "/skills/skill-clip-studio-video/",
     "icon": {
       "assetPath": "/icons/brands/tiktok.svg",
-      "sourcePath": "src/admin-ui/public/brands/tiktok.svg",
+      "sourcePath": "src/admin/ui/public/brands/tiktok.svg",
       "alt": "TikTok",
       "monochrome": true
     },
@@ -230,7 +319,7 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/tiktok.svg",
-      "sourcePath": "src/admin-ui/public/brands/tiktok.svg",
+      "sourcePath": "src/admin/ui/public/brands/tiktok.svg",
       "alt": "TikTok",
       "monochrome": true
     }
@@ -713,6 +802,62 @@
       "source": "https://github.com/phantasy-bot/skill-github.git",
       "cli": "phantasy extensions install skill github",
       "direct": "git clone https://github.com/phantasy-bot/skill-github.git skills/github"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Workflows",
+    "repoUrl": "https://github.com/phantasy-bot/skill-grocery-coupons",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0",
+    "downloadUrl": "https://github.com/phantasy-bot/skill-grocery-coupons",
+    "detailPath": "/skills/skill-grocery-coupons/",
+    "icon": null,
+    "kind": "skill",
+    "slug": "skill-grocery-coupons",
+    "name": "grocery-coupons",
+    "displayName": "Grocery Coupons",
+    "description": "Clip digital coupons and capture offer evidence on grocery portals (Stop & Shop, BJ's, Costco, Walmart, etc.) using browseruse/puppeteer. Approval-gated logins; no password storage in chat.",
+    "workspace": "automations",
+    "extensionKind": "integration",
+    "author": "Phantasy Team",
+    "tags": [
+      "coupons",
+      "grocery",
+      "browser",
+      "browseruse",
+      "household"
+    ],
+    "category": "skill",
+    "syncMode": "source-extract",
+    "banner": null,
+    "repository": "https://github.com/phantasy-bot/skill-grocery-coupons",
+    "skillContent": "---\nname: grocery-coupons\nversion: 0.1.0\ndescription: \"Clip digital coupons and capture offer evidence on grocery portals (Stop & Shop, BJ's, Costco, Walmart, etc.) using browseruse/puppeteer. Approval-gated logins; no password storage in chat.\"\ntags:\n  - coupons\n  - grocery\n  - browser\n  - browseruse\n  - household\nmetadata:\n  workspace: automations\n  extensionKind: integration\n  agent:\n    triggers:\n      - \"clip coupon\"\n      - \"clip coupons\"\n      - \"digital coupon\"\n      - \"stop and shop\"\n      - \"stop & shop\"\n      - \"bjs\"\n      - \"bj's\"\n      - \"costco coupons\"\n      - \"clip that deal\"\n---\n\n# Grocery coupons (BrowserUse)\n\nUse when the user wants MAID to **open a grocery / warehouse portal**, clip digital coupons, or verify a promo still works.\n\n## Tools\n\nPrefer **browseruse** plugin tools (`browseruse_browser_*`) when loaded.\nFallback: **puppeteer** MCP.\n\nTypical tools: navigate, snapshot, click, type, screenshot.\n\n## Boundaries\n\n1. **Ask approval** before any login or account action.\n2. **Never** paste or store passwords in chat, markdown memory, or public catalog.\n3. Prefer persistent profile dir when available:\n   `households/{householdId}/browser-profiles/{retailer}/`\n   (operator-managed cookies / browser profile — not committed to git).\n4. **No paid checkout** unless the user explicitly approves a purchase workflow.\n5. Public catalog evidence: screenshots only, blur account chrome / PII.\n\n## Retailer playbooks\n\n| Retailer    | Notes                                                      |\n| ----------- | ---------------------------------------------------------- |\n| Stop & Shop | Digital coupons after login; clip all matching pantry tags |\n| BJ's        | Membership may be required; clip club offers               |\n| Costco      | Warehouse coupons / online offers; membership gated        |\n| Walmart     | Rolling deals; capture price + any promo code field        |\n| Amazon      | Prefer amazon-shopping skill + MCP when available          |\n\n## Household clip flow (chat-steered) — **enqueue first**\n\nDo **not** open unbounded BrowserUse loops from chat. Prefer the job queue:\n\n1. Resolve `householdId` from session/metadata.\n2. Confirm retailer if ambiguous (stop-and-shop, bjs, costco, walmart, …).\n3. **Enqueue:** `POST /api/household/coupon-clip`  \n   `{ householdId, retailer, prompt }`  \n   Or `POST /api/deals/jobs` with `type: household-clip`.\n4. Respect budgets (3 browser jobs / household / day). If `skipped_budget`, tell the user.\n5. Worker (`coupon-clip-worker`) or immediate claim drains the job with browseruse/puppeteer under `approvals.browser: ask`.\n6. Prefer profile `households/{householdId}/browser-profiles/{retailer}/`.\n7. Private proof → `households/{id}/coupon-evidence/`; log clips in `coupon-clips.json`.\n8. Summarize results in chat.\n\n### Email path (preferred at scale)\n\nIf the user has email connected: `POST /api/household/coupon-email-ingest` first.  \nParses `email-messages.json` for coupon mail — **no browser**.\n\n## Public catalog verify flow\n\nSee workflow `coupon-verify`:\n\n1. Read `config/deals/offer-registry.json` + `deals/offers-runtime.json`.\n2. BrowserUse `claimUrl`; screenshot; set `agentVerdict` + `proofUrl`.\n3. Max ~5 BrowserUse runs/day unless operator override.\n\n## Approval checklist\n\n- [ ] User asked to clip / verify\n- [ ] Retailer confirmed\n- [ ] Login approved if required\n- [ ] No password written to workspace text files\n- [ ] Screenshot free of sensitive PII before public publish\n",
+    "metadata": {
+      "workspace": "automations",
+      "extensionKind": "integration",
+      "agent": {
+        "triggers": [
+          "clip coupon",
+          "clip coupons",
+          "digital coupon",
+          "stop and shop",
+          "stop & shop",
+          "bjs",
+          "bj's",
+          "costco coupons",
+          "clip that deal"
+        ]
+      }
+    },
+    "ownerKind": "first-party",
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/skill-grocery-coupons.git",
+      "cli": "phantasy extensions install skill grocery-coupons",
+      "direct": "git clone https://github.com/phantasy-bot/skill-grocery-coupons.git skills/grocery-coupons"
     },
     "profileImage": null
   },
@@ -1966,6 +2111,40 @@
   {
     "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Operations",
+    "repoUrl": "https://github.com/phantasy-bot/skill-opentui-layout",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.17-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/skill-opentui-layout",
+    "detailPath": "/skills/skill-opentui-layout/",
+    "icon": null,
+    "kind": "skill",
+    "slug": "skill-opentui-layout",
+    "name": "opentui-layout",
+    "displayName": "Opentui Layout",
+    "description": "Use when changing Phantasy's OpenTUI surfaces, especially chat cards, gutters, bordered boxes, inline status panels, and other terminal layout/rendering behavior.",
+    "workspace": "operations",
+    "extensionKind": "behavior",
+    "author": "Phantasy Team",
+    "tags": [],
+    "category": "skill",
+    "syncMode": "source-extract",
+    "banner": null,
+    "repository": "https://github.com/phantasy-bot/skill-opentui-layout",
+    "skillContent": "---\nname: opentui-layout\ndescription: Use when changing Phantasy's OpenTUI surfaces, especially chat cards, gutters, bordered boxes, inline status panels, and other terminal layout/rendering behavior.\n---\n\n# OpenTUI Layout\n\nUse this skill when editing terminal UI layout under `src/cli/tui/`.\n\n## Workflow\n\n1. Inspect the live render tree before changing numbers.\n2. Prefer one authoritative gutter layer per surface.\n3. Keep bordered cards responsible for internal padding only.\n4. Reuse shared card helpers for chat messages and inline runtime status.\n5. Verify with `pnpm exec tsc --noEmit` and the smallest relevant Vitest target.\n\n## Chat Layout Rules\n\n- Own horizontal gutters at the chat surface level in `src/cli/tui/chat-view.ts`.\n- Do not mix `width: \"100%\"` with horizontal `marginLeft` or `marginRight` on bordered message cards.\n- Keep bordered chat cards, their inner content boxes, and their text/markdown renderables explicitly stretched with `width: \"100%\"` and `maxWidth: \"100%\"`.\n- Do not add horizontal margins to `TextRenderable` or `MarkdownRenderable` inside bordered cards.\n- Use card padding to keep message content off the border.\n- Leave enough bottom padding in bordered cards so the last line does not sit on the border.\n- If the input box and message list need matching gutters, change the shared chat layout wrapper instead of offsetting them separately.\n- Keep narrative companion dialogue on the plain-text path unless the message clearly contains real markdown constructs such as code fences, links, headings, or lists.\n- Bracketed expression tags like `[annoyed]` and `[blink]` should not be sent through markdown conceal/rendering.\n- Streaming assistant updates, finalized assistant replies, and inline runtime/status cards should all mutate through one normalization-aware content controller.\n- Horizontal scroll resets should clear `translateX` recursively through the scroll content subtree and run again after deferred layout work, not only synchronously at mutation time.\n- OpenTUI `ScrollBoxRenderable.scrollTo()` and `scrollBy()` use `{ x, y }`, not `{ top }` or `{ deltaY }`; wrong-shaped scroll objects can create temporary horizontal drift that later updates appear to \"heal\".\n- Mount the bordered card shell first, then attach width-sensitive content renderables after mount. Pre-populating content before the shell is mounted can leave pre-stream cards with different geometry than streaming/finalized cards.\n- If a plain-text streaming message still looks different from its finalized state, remount the plain-text renderable during updates instead of assuming in-place content mutation preserves geometry.\n- OpenTUI textarea keybindings are exact-match overrides merged with defaults. If you want `Enter` to submit and `Shift+Enter` to keep newline behavior, bind both explicitly instead of assuming modifier fallthrough.\n- If blank-input history recall should use arrow keys, intercept it at the app layer only when the textarea is focused and empty; otherwise let the textarea keep normal cursor movement.\n- For search-plus-list overlays like the model picker, treat search and list as two distinct focus targets. Handle `Up`/`Down` handoff at the app layer, let `Esc` return from list to search before closing the overlay, and keep `/` / `Ctrl+F` reserved for search focus from the list.\n- If a search input and a list share one overlay, use one controller for query text, expanded sections, preferred selection, and focus target. Do not split that state across the input handler, list handler, and app key router.\n- Overlay positioning should center against the main content column, not the entire terminal width when a fixed right sidebar/panel is present.\n- Footer/help text should mirror the real active keymap and avoid re-explaining terminal-native conventions like blank-input history recall.\n\n## Inline Status Cards\n\n- Inline runtime/status surfaces should reuse the same bordered card helper as normal chat messages.\n- Keep progress/status text plain-text unless markdown is required.\n- Preserve recent command output so long-running local runtime work is visible in the chat area.\n\n## Terminal VRM Rules\n\n- OpenTUI's `ThreeRenderable` is only a low-level terminal 3D primitive. It is not a finished VRM widget.\n- Terminal VRM mode should use one real sidebar panel implementation and must not expose fake \"VRM\" toggles that only mutate mode labels.\n- Resolve VRM assets against the active project/global VRM roots before falling back to repo-root relative paths, otherwise bundled repo assets can override the user's configured project avatar.\n- In the terminal runtime, prefer loading `.vrm` assets as plain GLTF scenes and normalize their materials for CLI rendering. Do not assume the browser-oriented `@pixiv/three-vrm` loader/material path will work in the terminal process.\n- Strip or replace texture-driven materials for terminal rendering and rely on terminal-safe fallback colors instead of browser texture features.\n- Keep terminal-specific avatar animation lightweight: idle sway, expression pose offsets, and speaking bob are acceptable; full browser/web animation assumptions are not.\n- Avatar mode changes coming from slash commands or chat-local controls should notify the app shell through one callback so the right sidebar panel actually swaps, instead of keeping separate unsynchronized mode state.\n\n- PNGTuber image sizing should scale both down and up to the live terminal cell bounds. If zoom changes only affect the rest of the TUI, check for one-way “shrink only” image scaling in the cached frame decode path.\n",
+    "metadata": {},
+    "ownerKind": "first-party",
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/skill-opentui-layout.git",
+      "cli": "phantasy extensions install skill opentui-layout",
+      "direct": "git clone https://github.com/phantasy-bot/skill-opentui-layout.git skills/opentui-layout"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Operations",
     "repoUrl": "https://github.com/phantasy-bot/skill-party-agent-onboarding",
     "repoExists": false,
     "creator": "Phantasy",
@@ -2079,7 +2258,7 @@
     "syncMode": "source-extract",
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-phantasy-product-architecture",
-    "skillContent": "---\nname: phantasy-product-architecture\nversion: 0.1.0-beta\ndescription: \"Phantasy product architecture guide for workspace ownership, kernel versus product boundaries, taxonomy metadata, and correct feature placement across Character, Site, Business, Workflows, and Operations.\"\nmetadata:\n  workspace: operations\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"phantasy architecture\"\n      - \"workspace taxonomy\"\n      - \"where should this go\"\n      - \"feature placement\"\n      - \"kernel vs product\"\n      - \"product surface\"\n      - \"site workspace\"\n      - \"operations workspace\"\n      - \"business workspace\"\n      - \"character workspace\"\n      - \"workflows workspace\"\n---\n\n# Phantasy Product Architecture\n\nUse this skill when the task is to place, refactor, or name first-party Phantasy features.\n\n## Core Model\n\n- The repo is one flagship product: `WordPress for AI companions`.\n- The five primary workspaces are:\n  - `character`\n  - `site`\n  - `business`\n  - `workflows` (internal id `automations`)\n  - `operations`\n- `Notifications` is a launcher and inbox surface, not a sixth architecture domain.\n\n## Placement Rules\n\n1. Decide the owning workspace first.\n2. Decide whether the logic is:\n   - trusted kernel\n   - product surface\n   - extension surface\n3. Put domain logic before transport-specific wrappers.\n\nPrefer:\n\n- `workspaces/domain -> adapter surface`\n\nAvoid:\n\n- `admin-ui first -> domain later`\n- registry-only indirection when shared metadata would solve the problem\n\n## Kernel Versus Product\n\n- Kernel: provider contracts, config, memory/storage interfaces, workflow execution, plugin contracts, orchestration primitives.\n- Product: Character, Site, Business, Workflows, Operations features in admin UI, admin API, CLI, and public APIs.\n- Extensions: plugins, skills, workflows, packages.\n\n## Site-Specific Bias\n\nFor CMS and Site work:\n\n- Skills are `behavior`\n- Plugins are usually `capability` or `integration`\n- Workflows are `automation`\n\nKeep website/front-end rendering outside the first-party release surface; shared CMS features need a Site-domain model and public API contract.\n\n## Taxonomy References\n\n- `src/product/taxonomy.ts`\n- `src/product/taxonomy-validation.ts`\n- `src/plugins/content/plugin-metadata.ts`\n- `src/site/public-content-service.ts`\n\n## Naming Guidance\n\n- Use plain product language in user-facing surfaces.\n- Prefer `Content` over internal or poetic terms when the feature is really posts, pages, publishing, or CMS operations.\n- Remove release-surface aliases for retired first-party features, and keep labels, tabs, and docs on current product language.\n\n## Validation\n\nWhen moving or introducing product surfaces, verify:\n\n```bash\nbun run typecheck\nbun run validate:standards\n```\n",
+    "skillContent": "---\nname: phantasy-product-architecture\nversion: 0.1.0-beta\ndescription: \"Phantasy product architecture guide for workspace ownership, kernel versus product boundaries, taxonomy metadata, and correct feature placement across Character, Site, Business, Workflows, and Operations.\"\nmetadata:\n  workspace: operations\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"phantasy architecture\"\n      - \"workspace taxonomy\"\n      - \"where should this go\"\n      - \"feature placement\"\n      - \"kernel vs product\"\n      - \"product surface\"\n      - \"site workspace\"\n      - \"operations workspace\"\n      - \"business workspace\"\n      - \"character workspace\"\n      - \"workflows workspace\"\n---\n\n# Phantasy Product Architecture\n\nUse this skill when the task is to place, refactor, or name first-party Phantasy features.\n\n## Core Model\n\n- The repo is one flagship product: `WordPress for AI companions`.\n- The five primary workspaces are:\n  - `character`\n  - `site`\n  - `business`\n  - `workflows` (internal id `automations`)\n  - `operations`\n- `Notifications` is a launcher and inbox surface, not a sixth architecture domain.\n\n## Placement Rules\n\n1. Decide the owning workspace first.\n2. Decide whether the logic is:\n   - trusted kernel\n   - product surface\n   - extension surface\n3. Put domain logic before transport-specific wrappers.\n\nPrefer:\n\n- `workspaces/domain -> adapter surface`\n\nAvoid:\n\n- `admin-ui first -> domain later`\n- registry-only indirection when shared metadata would solve the problem\n\n## Kernel Versus Product\n\n- Kernel: provider contracts, config, memory/storage interfaces, workflow execution, plugin contracts, orchestration primitives.\n- Product: Character, Site, Business, Workflows, Operations features in admin UI, admin API, CLI, and public APIs.\n- Extensions: plugins, skills, workflows, packages.\n\n## Site-Specific Bias\n\nFor CMS and Site work:\n\n- Skills are `behavior`\n- Plugins are usually `capability` or `integration`\n- Workflows are `automation`\n\nKeep website/front-end rendering outside the first-party release surface; shared CMS features need a Site-domain model and public API contract.\n\n## Taxonomy References\n\n- `src/product/taxonomy.ts`\n- `src/product/taxonomy-validation.ts`\n- `src/plugins/content/plugin-metadata.ts`\n- `src/site-domain/public-content-service.ts`\n\n## Naming Guidance\n\n- Use plain product language in user-facing surfaces.\n- Prefer `Content` over internal or poetic terms when the feature is really posts, pages, publishing, or CMS operations.\n- Remove release-surface aliases for retired first-party features, and keep labels, tabs, and docs on current product language.\n\n## Validation\n\nWhen moving or introducing product surfaces, verify:\n\n```bash\nbun run typecheck\nbun run validate:standards\n```\n",
     "metadata": {
       "workspace": "operations",
       "extensionKind": "behavior",
@@ -2134,7 +2313,7 @@
     "syncMode": "source-extract",
     "banner": null,
     "repository": "https://github.com/phantasy-bot/skill-phantasy-site-building",
-    "skillContent": "---\nname: phantasy-site-building\nversion: 0.1.0-beta\ndescription: \"Phantasy Site workspace guide for building headless CMS pages, posts, content APIs, media, and block-based publishing flows with the correct architecture.\"\nmetadata:\n  workspace: site\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"build site\"\n      - \"headless cms\"\n      - \"custom page\"\n      - \"blog post\"\n      - \"content studio\"\n      - \"content api\"\n      - \"cms\"\n      - \"wordpress like\"\n      - \"gutenberg\"\n      - \"custom block\"\n      - \"block editor\"\n      - \"template part\"\n      - \"phantasy site\"\n      - \"phantasy cms\"\n---\n\n# Phantasy Site Building\n\nUse this skill when the task is to build or refactor the Phantasy Site workspace, headless CMS editor, pages, posts, public content APIs, media attachments, or block-based publishing flows.\n\n## Product Framing\n\n- Treat this as the `Site` workspace for the flagship product, not a detached blog tool.\n- The companion is the protagonist; publishing and the CMS shell are supporting product surfaces around her.\n- Prefer domain-first CMS primitives over transport-first hacks.\n\n## Current Repo Shape\n\n- The current Site system is the source of truth for document editing, publishing, and public content APIs.\n- `Pages` and `Posts` live under the Site content model, not config-backed page blobs.\n- Draft sessions, checkpoints, revisions, activity, media attachments, and blocks remain first-class CMS infrastructure.\n- Bundled frontend delivery is out of scope for this repo; keep external frontends user-owned.\n\n## Key Files\n\n- Draft/worktree + git-backed editing: `src/site/workspace-service.ts`\n- Site settings/types/schema: `src/site/types.ts`, `src/site/schemas.ts`\n- Site admin API: `src/admin-api/routes/site/site-routes.ts`\n- Public content APIs: `src/site/public-content-service.ts`, `src/server/routes/public-api-routes.ts`\n- Block registry and HTML rendering: `src/site/block-registry.ts`\n- Site admin UI: `src/admin-ui/components/tabs/SiteTab.tsx`\n\n## Working Rules\n\n1. Keep the Site workspace focused on CMS metadata, documents, media, checkpoints, revisions, drafts, publishing, and public read APIs.\n2. Keep pages/posts as first-class site documents and avoid reintroducing config-backed page storage.\n3. If adding a new first-party CMS feature, assign explicit Site workspace ownership and keep taxonomy metadata consistent.\n4. Keep the public API stable for both structured `blocks` and rendered HTML `content`.\n5. Treat frontend stacks as user-owned consumers of the headless APIs.\n\n## Current Constraints To Remember\n\n- Site drafts are git-backed; autosave is file persistence, while checkpoints are explicit draft-branch commits.\n- `SiteSettings` should stay CMS metadata only: title, description, and language.\n- Removed presentation config fields should not be generated, accepted in new schemas, or documented.\n- Import and migration work should land on the current Site document/API path only.\n\n## Preferred Direction\n\nWhen improving the CMS, bias toward this architecture:\n\n- Unify posts and pages into one Site-owned content model.\n- Introduce explicit body formats or a canonical `body` object instead of ambiguous raw strings.\n- Move toward block-capable content documents.\n- Render document bodies through shared block helpers for the `content` HTML response.\n- Preserve structured `blocks` in public responses so external frontends can render with their own components.\n\n## Blocks Guidance\n\nIf the task mentions blocks, Gutenberg-like editing, or custom page building:\n\n1. Start with a block registry and a renderer contract before building lots of block types.\n2. Keep block definitions explicit: `type`, attributes, allowed children, and render behavior.\n3. Support a migration path from current HTML and Markdown content.\n4. Add a small core block set first:\n   - paragraph\n   - heading\n   - image\n   - quote\n   - list\n   - code\n   - divider\n   - button\n   - group\n   - columns\n   - embed\n   - custom-html\n5. Make advanced blocks such as `custom-html` or script/embed surfaces privileged and explicit.\n6. Prefer plugin-extensible blocks over hardcoding every block in the core editor.\n\n## Editing Workflow\n\n1. Identify whether the task belongs in Site settings, document editing, publishing, media, public API, or block infrastructure.\n2. Inspect the existing CMS and content path before patching:\n   - storage model\n   - admin edit surface\n   - public API shape\n   - publish/visibility rules\n3. If changing CMS data shape, update:\n   - TypeScript types\n   - admin API routes\n   - UI editor/controller\n   - public content API\n   - relevant tests and generated docs\n4. Do not preserve retired frontend delivery or presentation config paths.\n\n## Avoid\n\n- Treating config-backed pages as the final CMS architecture.\n- Adding page-specific inline logic that should live in a renderer or block registry.\n- Mixing frontend presentation concerns with storage or content-type policy.\n- Giving unrestricted script execution to regular content authors by default.\n- Reintroducing bundled frontend delivery or visual editing shells.\n\n## Validation\n\nPrefer targeted validation after CMS/site changes:\n\n```bash\nbun run test:core -- src/site\nbun run test:core -- src/admin-api/routes/site\nbun run test:ui:components -- src/admin-ui/components/tabs/site\nbun run validate:standards\nbun run typecheck\n```\n\nIf the change touches broad CMS flows, also verify:\n\n```bash\nbun run test\n```\n",
+    "skillContent": "---\nname: phantasy-site-building\nversion: 0.1.0-beta\ndescription: \"Phantasy Site workspace guide for building headless CMS pages, posts, content APIs, media, and block-based publishing flows with the correct architecture.\"\nmetadata:\n  workspace: site\n  extensionKind: behavior\n  openclaw:\n    category: development\n  agent:\n    triggers:\n      - \"build site\"\n      - \"headless cms\"\n      - \"custom page\"\n      - \"blog post\"\n      - \"content studio\"\n      - \"content api\"\n      - \"cms\"\n      - \"wordpress like\"\n      - \"gutenberg\"\n      - \"custom block\"\n      - \"block editor\"\n      - \"template part\"\n      - \"phantasy site\"\n      - \"phantasy cms\"\n---\n\n# Phantasy Site Building\n\nUse this skill when the task is to build or refactor the Phantasy Site workspace, headless CMS editor, pages, posts, public content APIs, media attachments, or block-based publishing flows.\n\n## Product Framing\n\n- Treat this as the `Site` workspace for the flagship product, not a detached blog tool.\n- The companion is the protagonist; publishing and the CMS shell are supporting product surfaces around her.\n- Prefer domain-first CMS primitives over transport-first hacks.\n\n## Current Repo Shape\n\n- The current Site system is the source of truth for document editing, publishing, and public content APIs.\n- `Pages` and `Posts` live under the Site content model, not config-backed page blobs.\n- Draft sessions, checkpoints, revisions, activity, media attachments, and blocks remain first-class CMS infrastructure.\n- Bundled frontend delivery is out of scope for this repo; keep external frontends user-owned.\n\n## Key Files\n\n- Draft/worktree + git-backed editing: `src/site-domain/workspace-service.ts`\n- Site settings/types/schema: `src/site-domain/types.ts`, `src/site-domain/schemas.ts`\n- Site admin API: `src/admin/api/routes/site/site-routes.ts`\n- Public content APIs: `src/site-domain/public-content-service.ts`, `src/server/routes/public-api-routes.ts`\n- Block registry and HTML rendering: `src/site-domain/block-registry.ts`\n- Site admin UI: `src/admin/ui/components/tabs/SiteTab.tsx`\n\n## Working Rules\n\n1. Keep the Site workspace focused on CMS metadata, documents, media, checkpoints, revisions, drafts, publishing, and public read APIs.\n2. Keep pages/posts as first-class site documents and avoid reintroducing config-backed page storage.\n3. If adding a new first-party CMS feature, assign explicit Site workspace ownership and keep taxonomy metadata consistent.\n4. Keep the public API stable for both structured `blocks` and rendered HTML `content`.\n5. Treat frontend stacks as user-owned consumers of the headless APIs.\n\n## Current Constraints To Remember\n\n- Site drafts are git-backed; autosave is file persistence, while checkpoints are explicit draft-branch commits.\n- `SiteSettings` should stay CMS metadata only: title, description, and language.\n- Removed presentation config fields should not be generated, accepted in new schemas, or documented.\n- Import and migration work should land on the current Site document/API path only.\n\n## Preferred Direction\n\nWhen improving the CMS, bias toward this architecture:\n\n- Unify posts and pages into one Site-owned content model.\n- Introduce explicit body formats or a canonical `body` object instead of ambiguous raw strings.\n- Move toward block-capable content documents.\n- Render document bodies through shared block helpers for the `content` HTML response.\n- Preserve structured `blocks` in public responses so external frontends can render with their own components.\n\n## Blocks Guidance\n\nIf the task mentions blocks, Gutenberg-like editing, or custom page building:\n\n1. Start with a block registry and a renderer contract before building lots of block types.\n2. Keep block definitions explicit: `type`, attributes, allowed children, and render behavior.\n3. Support a migration path from current HTML and Markdown content.\n4. Add a small core block set first:\n   - paragraph\n   - heading\n   - image\n   - quote\n   - list\n   - code\n   - divider\n   - button\n   - group\n   - columns\n   - embed\n   - custom-html\n5. Make advanced blocks such as `custom-html` or script/embed surfaces privileged and explicit.\n6. Prefer plugin-extensible blocks over hardcoding every block in the core editor.\n\n## Editing Workflow\n\n1. Identify whether the task belongs in Site settings, document editing, publishing, media, public API, or block infrastructure.\n2. Inspect the existing CMS and content path before patching:\n   - storage model\n   - admin edit surface\n   - public API shape\n   - publish/visibility rules\n3. If changing CMS data shape, update:\n   - TypeScript types\n   - admin API routes\n   - UI editor/controller\n   - public content API\n   - relevant tests and generated docs\n4. Do not preserve retired frontend delivery or presentation config paths.\n\n## Avoid\n\n- Treating config-backed pages as the final CMS architecture.\n- Adding page-specific inline logic that should live in a renderer or block registry.\n- Mixing frontend presentation concerns with storage or content-type policy.\n- Giving unrestricted script execution to regular content authors by default.\n- Reintroducing bundled frontend delivery or visual editing shells.\n\n## Validation\n\nPrefer targeted validation after CMS/site changes:\n\n```bash\nbun run test:core -- src/site\nbun run test:core -- src/admin/api/routes/site\nbun run test:ui:components -- src/admin/ui/components/tabs/site\nbun run validate:standards\nbun run typecheck\n```\n\nIf the change touches broad CMS flows, also verify:\n\n```bash\nbun run test\n```\n",
     "metadata": {
       "workspace": "site",
       "extensionKind": "behavior",
@@ -2166,6 +2345,60 @@
       "source": "https://github.com/phantasy-bot/skill-phantasy-site-building.git",
       "cli": "phantasy extensions install skill phantasy-site-building",
       "direct": "git clone https://github.com/phantasy-bot/skill-phantasy-site-building.git skills/phantasy-site-building"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/skill-phantasy-store-ops",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/skill-phantasy-store-ops",
+    "detailPath": "/skills/skill-phantasy-store-ops/",
+    "icon": null,
+    "kind": "skill",
+    "slug": "skill-phantasy-store-ops",
+    "name": "phantasy-store-ops",
+    "displayName": "Phantasy Store Ops",
+    "description": "Operate Phantasy Store across staging and production: WooCommerce, Printful/Tapstitch POD, pre-orders, promote-with-approval. Use when maintaining the merch store, updating plugins, catalog, checkout, or deploying store changes.",
+    "workspace": "business",
+    "extensionKind": "behavior",
+    "author": "Phantasy Team",
+    "tags": [],
+    "category": "commerce",
+    "syncMode": "source-extract",
+    "banner": null,
+    "repository": "https://github.com/phantasy-bot/skill-phantasy-store-ops",
+    "skillContent": "---\nname: phantasy-store-ops\nversion: 0.1.0-beta\ndescription: \"Operate Phantasy Store across staging and production: WooCommerce, Printful/Tapstitch POD, pre-orders, promote-with-approval. Use when maintaining the merch store, updating plugins, catalog, checkout, or deploying store changes.\"\nmetadata:\n  workspace: business\n  extensionKind: behavior\n  openclaw:\n    category: commerce\n  agent:\n    triggers:\n      - \"store staging\"\n      - \"store production\"\n      - \"promote store\"\n      - \"woocommerce\"\n      - \"printful\"\n      - \"tapstitch\"\n      - \"store ops\"\n      - \"pre-order queue\"\n      - \"store health\"\n      - \"coming soon store\"\n---\n\n# Phantasy Store Ops\n\nOperate the **merch store** (not companion Site CMS). System of record is **WooCommerce**. Staging exists so production stays healthy.\n\n## Read First\n\n| Doc                                               | Why                         |\n| ------------------------------------------------- | --------------------------- |\n| `@phantasy/store/docs/architecture.md`            | Module map — what uses what |\n| Docs app: `guides/integrations/woocommerce-store` | Full setup guide            |\n| Skill references/                                 | Checklists below            |\n\n## Environments\n\n| Name         | Default agent target | Purpose                                   |\n| ------------ | -------------------- | ----------------------------------------- |\n| `staging`    | **Yes**              | Test plugins, catalog, checkout, POD sync |\n| `production` | Approval only        | Live customers                            |\n| `local`      | Dev dogfood          | Optional third env                        |\n\nPlugin tools: always pass `environment`. Default is **staging**.\n\nProduction writes (`wc_update_*`, create, refund, tracking) require **`approved: true`** after a human review of staging results.\n\n## Hard rules\n\n1. **Never** apply untested plugin updates, bulk catalog edits, or checkout config to production first.\n2. **Always** run health + smoke on staging after a change.\n3. **Always** report staging evidence before asking for production approval.\n4. POD: Printful (WP plugin) + Tapstitch (REST keys). Meta: `fulfillment=pod`, `podProvider=printful|tapstitch`.\n5. Custom cosplay/pre-order: `fulfillment=custom` — not sent to POD plugins.\n6. Coming soon: production may keep `STORE_COMING_SOON=1` until launch; staging can open with preview secret.\n\n## Tools (plugin-woocommerce)\n\n| Tool                                          | Staging      | Production   |\n| --------------------------------------------- | ------------ | ------------ |\n| `wc_list_environments`                        | read         | read         |\n| `wc_health` / `wc_compare_health`             | read         | read         |\n| `wc_ops_summary` / list/get orders & products | read         | read         |\n| `wc_update_product` / order status / tracking | free         | **approved** |\n| `wc_create_product` / `wc_refund_order`       | **approved** | **approved** |\n\n## Workflows\n\n| Workflow                   | When                                    |\n| -------------------------- | --------------------------------------- |\n| `store-staging-verify`     | After any staging change                |\n| `store-promote-production` | After staging green + human wants prod  |\n| `store-order-triage`       | New order webhook                       |\n| `store-preorder-release`   | Batch pre-orders into production sewing |\n| `store-daily-ops-brief`    | Cron summary                            |\n| `store-fulfillment-ship`   | Tracking                                |\n\n## Promote procedure (agent)\n\n```text\n1. wc_list_environments — confirm staging + production configured\n2. Apply change on environment=staging only\n3. Run store-staging-verify (or manual checklist in references/staging-verify.md)\n4. wc_compare_health — summarize differences\n5. Ask human for production approval (explicit)\n6. Re-apply same change on environment=production with approved:true\n7. Verify production health + one smoke path\n```\n\n## Local bootstrap (operator)\n\n```bash\n# Local WC :8080\ncd store && bun run wc:bootstrap && bun run dev:server\n\n# Staging WC :8081\ncd store/docker && ./bootstrap-staging.sh\n# BFF: source .env.staging && bun run dev:server  (port 4031)\n```\n\n## Related modules\n\n- BFF: `store/server/src/wc/*`\n- WP plugin: `store/wordpress/phantasy-commerce`\n- Agent plugin: `https://github.com/phantasy-bot/plugin-woocommerce`\n- Compose: `store/docker/`\n",
+    "metadata": {
+      "workspace": "business",
+      "extensionKind": "behavior",
+      "openclaw": {
+        "category": "commerce"
+      },
+      "agent": {
+        "triggers": [
+          "store staging",
+          "store production",
+          "promote store",
+          "woocommerce",
+          "printful",
+          "tapstitch",
+          "store ops",
+          "pre-order queue",
+          "store health",
+          "coming soon store"
+        ]
+      }
+    },
+    "ownerKind": "first-party",
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/skill-phantasy-store-ops.git",
+      "cli": "phantasy extensions install skill phantasy-store-ops",
+      "direct": "git clone https://github.com/phantasy-bot/skill-phantasy-store-ops.git skills/phantasy-store-ops"
     },
     "profileImage": null
   },
@@ -2301,6 +2534,57 @@
       "source": "https://github.com/phantasy-bot/skill-research-paper-writing.git",
       "cli": "phantasy extensions install skill research-paper-writing",
       "direct": "git clone https://github.com/phantasy-bot/skill-research-paper-writing.git skills/research-paper-writing"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Workflows",
+    "repoUrl": "https://github.com/phantasy-bot/skill-robinhood-agentic-trading",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0",
+    "downloadUrl": "https://github.com/phantasy-bot/skill-robinhood-agentic-trading",
+    "detailPath": "/skills/skill-robinhood-agentic-trading/",
+    "icon": null,
+    "kind": "skill",
+    "slug": "skill-robinhood-agentic-trading",
+    "name": "robinhood-agentic-trading",
+    "displayName": "Robinhood Agentic Trading",
+    "description": "Operate Robinhood Agentic Trading MCP tools for MAID: review-first equity orders, enforce household financial guardrails, and queue place_* tools for user approval.",
+    "workspace": "automations",
+    "extensionKind": "integration",
+    "author": "Phantasy Team",
+    "tags": [
+      "robinhood",
+      "trading",
+      "portfolio",
+      "wealth"
+    ],
+    "category": "skill",
+    "syncMode": "source-extract",
+    "banner": null,
+    "repository": "https://github.com/phantasy-bot/skill-robinhood-agentic-trading",
+    "skillContent": "---\nname: robinhood-agentic-trading\nversion: 0.1.0\ndescription: \"Operate Robinhood Agentic Trading MCP tools for MAID: review-first equity orders, enforce household financial guardrails, and queue place_* tools for user approval.\"\ntags:\n  - robinhood\n  - trading\n  - portfolio\n  - wealth\nmetadata:\n  workspace: automations\n  extensionKind: integration\n  agent:\n    triggers:\n      - robinhood\n      - agentic trading\n      - place order\n      - rebalance portfolio\n      - portfolio review\n---\n\n# Robinhood Agentic Trading\n\nUse when the household has the **Robinhood** connector connected (Wealth tier).\n\n## Scope\n\n- **Read** tools may access portfolio data across Robinhood accounts.\n- **Write** tools (`place_equity_order`, `cancel_equity_order`, etc.) execute only in the user's **Agentic account** — never the primary portfolio.\n- Trades require explicit user approval in chat (`approvals.mode: ask`).\n\n## Workflow\n\n1. Read `households/{householdId}/financial-guardrails.md` before recommending or simulating trades.\n2. Use `mcp_robinhood_trading_get_portfolio` and `mcp_robinhood_trading_get_equity_positions` for context.\n3. Always call `mcp_robinhood_trading_review_equity_order` before requesting approval for `place_equity_order`.\n4. Reject orders that violate guardrails (max single trade %, allowed assets, daily turnover).\n5. Append reasoning to `trade-journal.md`; never imply guaranteed returns.\n\n## Disclosures\n\nRemind the user that agentic trading involves significant risk and that they are responsible for all Agentic-account activity.\n",
+    "metadata": {
+      "workspace": "automations",
+      "extensionKind": "integration",
+      "agent": {
+        "triggers": [
+          "robinhood",
+          "agentic trading",
+          "place order",
+          "rebalance portfolio",
+          "portfolio review"
+        ]
+      }
+    },
+    "ownerKind": "first-party",
+    "install": {
+      "kind": "git",
+      "source": "https://github.com/phantasy-bot/skill-robinhood-agentic-trading.git",
+      "cli": "phantasy extensions install skill robinhood-agentic-trading",
+      "direct": "git clone https://github.com/phantasy-bot/skill-robinhood-agentic-trading.git skills/robinhood-agentic-trading"
     },
     "profileImage": null
   },
@@ -3285,7 +3569,7 @@
     "detailPath": "/skills/skill-xai-grok/",
     "icon": {
       "assetPath": "/icons/brands/x.svg",
-      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "sourcePath": "src/admin/ui/public/brands/x.svg",
       "alt": "X",
       "monochrome": true
     },
@@ -3342,7 +3626,7 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/x.svg",
-      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "sourcePath": "src/admin/ui/public/brands/x.svg",
       "alt": "X",
       "monochrome": true
     }

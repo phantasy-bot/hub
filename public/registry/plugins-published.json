@@ -5,7 +5,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-monitoring",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-monitoring",
     "detailPath": "/plugins/plugin-monitoring/",
     "icon": null,
@@ -87,12 +87,12 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-x",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-x",
     "detailPath": "/plugins/plugin-x/",
     "icon": {
       "assetPath": "/icons/brands/x.svg",
-      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "sourcePath": "src/admin/ui/public/brands/x.svg",
       "alt": "X",
       "monochrome": true
     },
@@ -172,7 +172,7 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/x.svg",
-      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "sourcePath": "src/admin/ui/public/brands/x.svg",
       "alt": "X",
       "monochrome": true
     }

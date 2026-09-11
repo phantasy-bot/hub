@@ -5,7 +5,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-acp",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-acp",
     "detailPath": "/plugins/plugin-acp/",
     "icon": {
@@ -107,7 +107,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-adventure",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-adventure",
     "detailPath": "/plugins/plugin-adventure/",
     "icon": null,
@@ -189,7 +189,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-creator-studio",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-creator-studio",
     "detailPath": "/plugins/plugin-creator-studio/",
     "icon": null,
@@ -276,17 +276,17 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "monorepo",
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-discord",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-discord",
     "detailPath": "/plugins/plugin-discord/",
     "icon": {
       "assetPath": "/icons/brands/discord.svg",
-      "sourcePath": "src/admin-ui/public/brands/discord.svg",
+      "sourcePath": "src/admin/ui/public/brands/discord.svg",
       "alt": "Discord"
     },
     "slug": "plugin-discord",
@@ -306,9 +306,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "monorepo",
-    "sourcePayload": "source-extract",
-    "syncMode": "source-extract",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -365,7 +365,7 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/discord.svg",
-      "sourcePath": "src/admin-ui/public/brands/discord.svg",
+      "sourcePath": "src/admin/ui/public/brands/discord.svg",
       "alt": "Discord"
     }
   },
@@ -375,7 +375,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-email",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-email",
     "detailPath": "/plugins/plugin-email/",
     "icon": null,
@@ -464,7 +464,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-erc8004",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-erc8004",
     "detailPath": "/plugins/plugin-erc8004/",
     "icon": null,
@@ -558,7 +558,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-fanvue",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.2.0-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-fanvue",
     "detailPath": "/plugins/plugin-fanvue/",
     "icon": {
@@ -569,7 +569,7 @@
     "slug": "plugin-fanvue",
     "packageName": "@phantasy/plugin-fanvue",
     "displayName": "Fanvue",
-    "description": "Fanvue creator-business integration plugin for Phantasy.",
+    "description": "Fanvue creator automation, messaging, publishing, and revenue tracking plugin for Phantasy.",
     "workspace": "business",
     "extensionKind": "integration",
     "category": "creator",
@@ -577,7 +577,11 @@
       "fanvue",
       "creator",
       "business",
-      "subscriptions"
+      "subscriptions",
+      "messaging",
+      "publishing",
+      "revenue",
+      "automation"
     ],
     "permissions": [
       "internet"
@@ -596,7 +600,11 @@
         "fanvue",
         "creator",
         "business",
-        "subscriptions"
+        "subscriptions",
+        "messaging",
+        "publishing",
+        "revenue",
+        "automation"
       ],
       "workspace": "business",
       "extensionKind": "integration",
@@ -617,7 +625,11 @@
           "fanvue",
           "creator",
           "business",
-          "subscriptions"
+          "subscriptions",
+          "messaging",
+          "publishing",
+          "revenue",
+          "automation"
         ]
       },
       "configSchema": {
@@ -652,7 +664,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-financial",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-financial",
     "detailPath": "/plugins/plugin-financial/",
     "icon": null,
@@ -758,7 +770,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-github",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-github",
     "detailPath": "/plugins/plugin-github/",
     "icon": null,
@@ -844,7 +856,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-gitlab",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-gitlab",
     "detailPath": "/plugins/plugin-gitlab/",
     "icon": null,
@@ -930,12 +942,12 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-instagram",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-instagram",
     "detailPath": "/plugins/plugin-instagram/",
     "icon": {
       "assetPath": "/icons/brands/instagram.svg",
-      "sourcePath": "src/admin-ui/public/brands/instagram.svg",
+      "sourcePath": "src/admin/ui/public/brands/instagram.svg",
       "alt": "Instagram"
     },
     "slug": "plugin-instagram",
@@ -1014,7 +1026,7 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/instagram.svg",
-      "sourcePath": "src/admin-ui/public/brands/instagram.svg",
+      "sourcePath": "src/admin/ui/public/brands/instagram.svg",
       "alt": "Instagram"
     }
   },
@@ -1024,14 +1036,14 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.2.2-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-kalshi",
     "detailPath": "/plugins/plugin-kalshi/",
     "icon": null,
     "slug": "plugin-kalshi",
     "packageName": "@phantasy/plugin-kalshi",
     "displayName": "Kalshi",
-    "description": "Kalshi prediction markets: search, portfolio, and gated order placement.",
+    "description": "Kalshi prediction-market integration plugin for Phantasy.",
     "workspace": "business",
     "extensionKind": "integration",
     "category": "markets",
@@ -1069,7 +1081,7 @@
       "platforms": [
         "node"
       ],
-      "productionReady": true,
+      "productionReady": false,
       "adminSurface": {
         "tabId": "kalshi",
         "label": "Kalshi",
@@ -1077,44 +1089,17 @@
         "kind": "generic",
         "keywords": [
           "kalshi",
-          "prediction markets",
+          "prediction-markets",
+          "trading",
           "finance"
-        ],
-        "advancedModule": "prediction-markets"
+        ]
       },
       "configSchema": {
         "type": "object",
         "properties": {
           "enabled": {
             "type": "boolean",
-            "default": true,
-            "title": "Enabled",
-            "description": "Load Kalshi tools and admin surface."
-          },
-          "allowTrading": {
-            "type": "boolean",
-            "default": false,
-            "title": "Allow trading",
-            "description": "When on, order tools may place and cancel live orders. Toggle anytime in Admin → Plugins → Kalshi."
-          },
-          "environment": {
-            "type": "string",
-            "enum": [
-              "demo",
-              "production"
-            ],
-            "default": "demo",
-            "title": "Environment"
-          },
-          "apiKey": {
-            "type": "string",
-            "title": "API key ID",
-            "format": "password"
-          },
-          "privateKeyPem": {
-            "type": "string",
-            "title": "RSA private key (PEM)",
-            "format": "pem"
+            "default": true
           }
         }
       }
@@ -1137,7 +1122,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-listmonk",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-listmonk",
     "detailPath": "/plugins/plugin-listmonk/",
     "icon": null,
@@ -1163,7 +1148,7 @@
     "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
-    "monorepoPackageStatus": "transitional",
+    "monorepoPackageStatus": "removed",
     "phantasy": {
       "displayName": "Listmonk",
       "category": "email",
@@ -1223,7 +1208,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-local-whisper",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-local-whisper",
     "detailPath": "/plugins/plugin-local-whisper/",
     "icon": null,
@@ -1306,12 +1291,12 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "monorepo",
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-messenger",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-messenger",
     "detailPath": "/plugins/plugin-messenger/",
     "icon": null,
@@ -1332,9 +1317,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "monorepo",
-    "sourcePayload": "source-extract",
-    "syncMode": "source-extract",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1397,7 +1382,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-monitoring",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-monitoring",
     "detailPath": "/plugins/plugin-monitoring/",
     "icon": null,
@@ -1476,17 +1461,106 @@
   {
     "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-patreon",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-patreon",
+    "detailPath": "/plugins/plugin-patreon/",
+    "icon": null,
+    "slug": "plugin-patreon",
+    "packageName": "@phantasy/plugin-patreon",
+    "displayName": "Patreon",
+    "description": "Patreon API v2 audience, entitlement, and reviewed free/paid post-planning integration for Phantasy creator companions.",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "creator",
+    "tags": [
+      "patreon",
+      "creator",
+      "members",
+      "tiers",
+      "publishing"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "Patreon",
+      "category": "creator",
+      "tags": [
+        "patreon",
+        "creator",
+        "members",
+        "tiers",
+        "publishing"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": false,
+      "adminSurface": {
+        "tabId": "patreon",
+        "label": "Patreon",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "patreon",
+          "creator",
+          "members",
+          "tiers",
+          "publishing"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "patreon",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-patreon.git",
+      "cli": "phantasy extensions install plugin patreon",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-patreon.git .phantasy/plugins/patreon"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-polymarket",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.2.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-polymarket",
     "detailPath": "/plugins/plugin-polymarket/",
     "icon": null,
     "slug": "plugin-polymarket",
     "packageName": "@phantasy/plugin-polymarket",
     "displayName": "Polymarket",
-    "description": "Polymarket prediction markets: public research tools and gated CLOB trading.",
+    "description": "Polymarket prediction-market integration plugin for Phantasy.",
     "workspace": "business",
     "extensionKind": "integration",
     "category": "markets",
@@ -1524,11 +1598,15 @@
       "permissions": [
         "internet"
       ],
-      "pluginDependencies": [],
+      "pluginDependencies": [
+        {
+          "plugin": "@phantasy/plugin-wallet"
+        }
+      ],
       "platforms": [
         "node"
       ],
-      "productionReady": true,
+      "productionReady": false,
       "adminSurface": {
         "tabId": "polymarket",
         "label": "Polymarket",
@@ -1536,48 +1614,17 @@
         "kind": "generic",
         "keywords": [
           "polymarket",
-          "prediction markets",
+          "prediction-markets",
+          "trading",
           "finance"
-        ],
-        "advancedModule": "prediction-markets"
+        ]
       },
       "configSchema": {
         "type": "object",
         "properties": {
           "enabled": {
             "type": "boolean",
-            "default": true,
-            "title": "Enabled"
-          },
-          "allowTrading": {
-            "type": "boolean",
-            "default": false,
-            "title": "Allow trading",
-            "description": "When on, order tools may place CLOB trades. Toggle anytime in Admin → Plugins → Polymarket."
-          },
-          "privateKey": {
-            "type": "string",
-            "title": "Trading private key",
-            "format": "password"
-          },
-          "funderAddress": {
-            "type": "string",
-            "title": "Funder address"
-          },
-          "chainId": {
-            "type": "number",
-            "default": 137,
-            "title": "Chain ID"
-          },
-          "gammaBaseUrl": {
-            "type": "string",
-            "default": "https://gamma-api.polymarket.com",
-            "title": "Gamma API URL"
-          },
-          "clobBaseUrl": {
-            "type": "string",
-            "default": "https://clob.polymarket.com",
-            "title": "CLOB API URL"
+            "default": true
           }
         }
       }
@@ -1600,7 +1647,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-romance-affection",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-romance-affection",
     "detailPath": "/plugins/plugin-romance-affection/",
     "icon": null,
@@ -1677,17 +1724,17 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "monorepo",
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-telegram",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-telegram",
     "detailPath": "/plugins/plugin-telegram/",
     "icon": {
       "assetPath": "/icons/brands/telegram.svg",
-      "sourcePath": "src/admin-ui/public/brands/telegram.svg",
+      "sourcePath": "src/admin/ui/public/brands/telegram.svg",
       "alt": "Telegram",
       "monochrome": true
     },
@@ -1708,9 +1755,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "monorepo",
-    "sourcePayload": "source-extract",
-    "syncMode": "source-extract",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1767,18 +1814,18 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/telegram.svg",
-      "sourcePath": "src/admin-ui/public/brands/telegram.svg",
+      "sourcePath": "src/admin/ui/public/brands/telegram.svg",
       "alt": "Telegram",
       "monochrome": true
     }
   },
   {
-    "sourceOfTruth": "monorepo",
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-twilio",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-twilio",
     "detailPath": "/plugins/plugin-twilio/",
     "icon": null,
@@ -1799,9 +1846,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "monorepo",
-    "sourcePayload": "source-extract",
-    "syncMode": "source-extract",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1859,12 +1906,12 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "monorepo",
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-twitch",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-twitch",
     "detailPath": "/plugins/plugin-twitch/",
     "icon": null,
@@ -1885,9 +1932,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "monorepo",
-    "sourcePayload": "source-extract",
-    "syncMode": "source-extract",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -1950,7 +1997,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-versus",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-versus",
     "detailPath": "/plugins/plugin-versus/",
     "icon": null,
@@ -2032,7 +2079,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-wallet",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-wallet",
     "detailPath": "/plugins/plugin-wallet/",
     "icon": null,
@@ -2118,7 +2165,7 @@
     "repoUrl": "https://github.com/phantasy-bot/plugin-weather",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-weather",
     "detailPath": "/plugins/plugin-weather/",
     "icon": null,
@@ -2201,12 +2248,12 @@
     "profileImage": null
   },
   {
-    "sourceOfTruth": "monorepo",
+    "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
     "repoUrl": "https://github.com/phantasy-bot/plugin-whatsapp",
     "repoExists": true,
     "creator": "Phantasy Team",
-    "version": "0.1.0-beta",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-whatsapp",
     "detailPath": "/plugins/plugin-whatsapp/",
     "icon": null,
@@ -2227,9 +2274,9 @@
       "internet"
     ],
     "dependencies": [],
-    "sourceOwner": "monorepo",
-    "sourcePayload": "source-extract",
-    "syncMode": "source-extract",
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
     "npmPublished": false,
     "runtimeLoadMode": "git",
     "monorepoPackageStatus": "removed",
@@ -2289,15 +2336,101 @@
   {
     "sourceOfTruth": "standalone-repo",
     "workspaceLabel": "Business",
-    "repoUrl": "https://github.com/phantasy-bot/plugin-x",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-woocommerce",
     "repoExists": true,
     "creator": "Phantasy Team",
     "version": "0.1.0-beta",
+    "downloadUrl": "https://github.com/phantasy-bot/plugin-woocommerce",
+    "detailPath": "/plugins/plugin-woocommerce/",
+    "icon": null,
+    "slug": "plugin-woocommerce",
+    "packageName": "@phantasy/plugin-woocommerce",
+    "displayName": "WooCommerce",
+    "description": "WooCommerce store ops integration for Phantasy agents (catalog, orders, fulfillment).",
+    "workspace": "business",
+    "extensionKind": "integration",
+    "category": "commerce",
+    "tags": [
+      "woocommerce",
+      "commerce",
+      "store",
+      "orders"
+    ],
+    "permissions": [
+      "internet"
+    ],
+    "dependencies": [],
+    "sourceOwner": "standalone-repo",
+    "sourcePayload": "standalone-only",
+    "syncMode": "standalone-repo",
+    "npmPublished": false,
+    "runtimeLoadMode": "git",
+    "monorepoPackageStatus": "removed",
+    "phantasy": {
+      "displayName": "WooCommerce",
+      "category": "commerce",
+      "tags": [
+        "woocommerce",
+        "commerce",
+        "store",
+        "orders"
+      ],
+      "workspace": "business",
+      "extensionKind": "integration",
+      "permissions": [
+        "internet"
+      ],
+      "pluginDependencies": [],
+      "platforms": [
+        "node"
+      ],
+      "productionReady": true,
+      "adminSurface": {
+        "tabId": "woocommerce",
+        "label": "WooCommerce",
+        "workspace": "business",
+        "kind": "generic",
+        "keywords": [
+          "woocommerce",
+          "commerce",
+          "store",
+          "orders"
+        ]
+      },
+      "configSchema": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean",
+            "default": true
+          }
+        }
+      }
+    },
+    "kind": "plugin",
+    "name": "woocommerce",
+    "author": "Phantasy Team",
+    "banner": null,
+    "install": {
+      "kind": "git",
+      "source": "git+https://github.com/phantasy-bot/plugin-woocommerce.git",
+      "cli": "phantasy extensions install plugin woocommerce",
+      "direct": "git clone https://github.com/phantasy-bot/plugin-woocommerce.git .phantasy/plugins/woocommerce"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "standalone-repo",
+    "workspaceLabel": "Business",
+    "repoUrl": "https://github.com/phantasy-bot/plugin-x",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.17-beta",
     "downloadUrl": "https://github.com/phantasy-bot/plugin-x",
     "detailPath": "/plugins/plugin-x/",
     "icon": {
       "assetPath": "/icons/brands/x.svg",
-      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "sourcePath": "src/admin/ui/public/brands/x.svg",
       "alt": "X",
       "monochrome": true
     },
@@ -2377,7 +2510,7 @@
     },
     "profileImage": {
       "assetPath": "/icons/brands/x.svg",
-      "sourcePath": "src/admin-ui/public/brands/x.svg",
+      "sourcePath": "src/admin/ui/public/brands/x.svg",
       "alt": "X",
       "monochrome": true
     }

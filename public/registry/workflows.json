@@ -146,6 +146,61 @@
   },
   {
     "sourceOfTruth": "monorepo",
+    "workspaceLabel": "Workflows",
+    "repoUrl": "https://forgejo.phantasy.bot/phantasy/agent",
+    "repoExists": true,
+    "creator": "Phantasy Team",
+    "version": "0.1.0-beta",
+    "downloadUrl": "https://forgejo.phantasy.bot/phantasy/agent",
+    "detailPath": "/workflows/workflow-metadata-catalog-maintenance/",
+    "icon": null,
+    "kind": "workflow",
+    "slug": "workflow-metadata-catalog-maintenance",
+    "name": "metadata-catalog-maintenance",
+    "displayName": "Metadata Catalog Maintenance",
+    "description": "Run bounded, source-backed maintenance of the Metadata POD blanks catalog.",
+    "workspace": "automations",
+    "extensionKind": "automation",
+    "author": "Phantasy Team",
+    "tags": [
+      "metadata",
+      "catalog",
+      "pod",
+      "blanks",
+      "data-maintenance",
+      "forgejo",
+      "review-gated"
+    ],
+    "category": "data-maintenance",
+    "banner": null,
+    "syncMode": "source-extract",
+    "metadata": {
+      "name": "metadata-catalog-maintenance",
+      "displayName": "Metadata Catalog Maintenance",
+      "description": "Run bounded, source-backed maintenance of the Metadata POD blanks catalog.",
+      "author": "Phantasy Team",
+      "version": "0.1.0-beta",
+      "category": "data-maintenance",
+      "tags": [
+        "metadata",
+        "catalog",
+        "pod",
+        "blanks",
+        "data-maintenance",
+        "forgejo",
+        "review-gated"
+      ]
+    },
+    "install": {
+      "kind": "git",
+      "source": "https://forgejo.phantasy.bot/phantasy/agent.git",
+      "cli": "phantasy extensions install workflow metadata-catalog-maintenance",
+      "direct": "mkdir -p ~/.phantasy/workflows && cp packages/workflow-metadata-catalog-maintenance/metadata-catalog-maintenance.*.json ~/.phantasy/workflows/"
+    },
+    "profileImage": null
+  },
+  {
+    "sourceOfTruth": "monorepo",
     "workspaceLabel": "Character",
     "repoUrl": "https://github.com/phantasy-bot/companion",
     "repoExists": true,
